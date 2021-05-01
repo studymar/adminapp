@@ -1,2 +1,2 @@
 # adminapp
-test c
+test c2
