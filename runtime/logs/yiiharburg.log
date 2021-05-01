@@ -220,29 +220,3 @@ Stack trace:
 2021-04-28 22:15:47 [127.0.0.1][-][-][info][yii\db\Command::execute] DELETE FROM `votinganswer` WHERE (`votingquestion_id`='4') AND (`votingweights_id`='2')
     in L:\Tools\xampp\htdocs\yiiharburg-adminapp\models\voting\Votinganswer.php:418
     in L:\Tools\xampp\htdocs\yiiharburg-adminapp\controllers\VotingController.php:561
-2021-05-01 17:28:27 [127.0.0.1][1][5k9is2cg99h8f3jt4pmaagi7ut][info][yii\web\User::login] User '1' logged in from 127.0.0.1 with duration 2592000.
-    in L:\Tools\xampp\htdocs\adminapp\models\forms\LoginForm.php:78
-    in L:\Tools\xampp\htdocs\adminapp\controllers\AccountController.php:64
-2021-05-01 17:28:27 [127.0.0.1][1][5k9is2cg99h8f3jt4pmaagi7ut][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: teaserlist/index in L:\Tools\xampp\htdocs\adminapp\vendor\yiisoft\yii2\base\Controller.php:151
-Stack trace:
-#0 L:\Tools\xampp\htdocs\adminapp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
-#1 L:\Tools\xampp\htdocs\adminapp\views\page\index.php(17): yii\base\Module->runAction('teaserlist/inde...', Array)
-#2 L:\Tools\xampp\htdocs\adminapp\vendor\yiisoft\yii2\base\View.php(348): require('L:\\Tools\\xampp\\...')
-#3 L:\Tools\xampp\htdocs\adminapp\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('L:\\Tools\\xampp\\...', Array)
-#4 L:\Tools\xampp\htdocs\adminapp\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('L:\\Tools\\xampp\\...', Array, Object(app\controllers\PageController))
-#5 L:\Tools\xampp\htdocs\adminapp\vendor\yiisoft\yii2\base\Controller.php(409): yii\base\View->render('index', Array, Object(app\controllers\PageController))
-#6 L:\Tools\xampp\htdocs\adminapp\controllers\PageController.php(118): yii\base\Controller->render('index', Array)
-#7 [internal function]: app\controllers\PageController->actionIndex(false)
-#8 L:\Tools\xampp\htdocs\adminapp\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
-#9 L:\Tools\xampp\htdocs\adminapp\vendor\yiisoft\yii2\base\Controller.php(180): yii\base\InlineAction->runWithParams(Array)
-#10 L:\Tools\xampp\htdocs\adminapp\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
-#11 L:\Tools\xampp\htdocs\adminapp\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('page/index', Array)
-#12 L:\Tools\xampp\htdocs\adminapp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
-#13 L:\Tools\xampp\htdocs\adminapp\web\index.php(12): yii\base\Application->run()
-#14 {main}
-
-Next yii\web\NotFoundHttpException: Seite nicht gefunden. in L:\Tools\xampp\htdocs\adminapp\vendor\yiisoft\yii2\web\Application.php:115
-Stack trace:
-#0 L:\Tools\xampp\htdocs\adminapp\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
-#1 L:\Tools\xampp\htdocs\adminapp\web\index.php(12): yii\base\Application->run()
-#2 {main}

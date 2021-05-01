@@ -1,0 +1,12 @@
+
+Start der Tests:
+vendor\bin\codecept run functional
+
+vendor\bin\codecept run unit
+
+java -jar -Dwebdriver.gecko.driver=geckodriver selenium-server-standalone-3.141.59.jar
+java -jar -Dwebdriver.chrome.driver=chromedriver selenium-server-standalone-3.141.59.jar
+vendor\bin\codecept run acceptance
+
+oder alle gleichzeitig
+vendor\bin\codecept run

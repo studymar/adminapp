@@ -1,0 +1,153 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : 28.09.2020, 23:23:30
+    Author     : Mark Worthmann
+*/
+.pagebar {
+    background-color: #3a4651;
+    position: fixed;
+    right: -240px;
+    width: 240px;
+    padding-bottom: 60px;
+    position: ralative;
+    top: 0px;
+    bottom: 0;
+    -webkit-transition: right 0.6s ease;
+    transition: right 0.6s ease;
+    z-index: 20;
+    .pagebar-logo {
+        display: inline-block;
+        width: auto;
+        height: auto;
+        vertical-align: middle;
+        margin-right: 5px;
+        position: relative;
+        i {
+            color: #ffffff;
+        }
+    }
+    .sidebar-header i.btn-close {
+        color: #ffffff;
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 70px;
+        font-size: 12px;
+        width: 20px;
+        margin-top: 2px;
+    }
+}
+.pagebar-open {
+    .sidebar-overlay {
+        left: 0;
+        opacity: 1;
+    }
+    .pagebar {
+        right: 0;
+        .pagebar-container {
+            overflow-y: hidden;
+            position: absolute;
+            top: 0;
+            bottom: 51px;
+            width: 100%;
+            left: 0;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+        .pagebar-header .brand {
+            color: #fff;
+            text-align: left;
+            padding-left: 25px;
+            line-height: 70px;
+            font-size: 16px;
+        }
+        #pagebar-collapse-btn {
+            a {
+              height: 100%;
+              display: block;
+            }
+        }
+        .pagebar-menu {
+            font-size: 14px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            li a {
+                color: rgba(255, 255, 255, 0.5);
+                text-decoration: none;
+                display: block;
+            }
+            ul { /*submenu*/
+                list-style: none;
+            }
+        }
+        .pagebar-menu > li.active > a, .pagebar-menu > li.active > a:hover {
+            background-color: #85CE36 !important;
+            color: #ffffff !important;
+        }
+        .pagebar-menu > li > a {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-left: 20px;
+            padding-right: 15px;
+            i {
+                color: #969696;                
+                margin-right: 5px;
+                font-size: 16px;
+                &.material-icons {
+                    position: relative;
+                    top: 2px;
+                }
+            }
+            &:hover {
+                color: #ffffff;
+                i {
+                    color: #ffffff;
+                }
+            }
+        }
+
+        /* Template Auswahl für Content auf Seite */
+        .page-templatechooser, .page-delete-confirmation {
+            &.collapse {
+                &.show {
+                    display: block;
+                }
+            }
+            .description {
+                color: rgba(255, 255, 255, 0.5);
+                padding: 3px;
+                margin-left: 5px;
+            }
+            .card {
+                margin: 5px;
+                background: transparent;
+                border: 1px solid rgba(255, 255, 255, 0.5);
+                &:hover {
+                    background: #3c4955;
+                    border: 1px solid rgba(205, 205, 205, 0.9);
+                    .templatename a {
+                        color: #ffffff;
+                    }
+                }
+                .card-body {
+                    padding: 3px;
+                    .templatename {
+                        font-size: 0.9rem;
+                        color: rgba(255, 255, 255, 0.5);
+                        margin: 0px;
+                        margin-bottom: 1px;
+                        padding: 0px;
+                    }
+                }
+            }
+        }
+        
+        
+    }
+}
+
+

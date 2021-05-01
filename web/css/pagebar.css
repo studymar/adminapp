@@ -1,0 +1,120 @@
+@charset "UTF-8";
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : 28.09.2020, 23:23:30
+    Author     : Mark Worthmann
+*/
+.pagebar {
+  background-color: #3a4651;
+  position: fixed;
+  right: -240px;
+  width: 240px;
+  padding-bottom: 60px;
+  position: ralative;
+  top: 0px;
+  bottom: 0;
+  -webkit-transition: right 0.6s ease;
+  transition: right 0.6s ease;
+  z-index: 20; }
+  .pagebar .pagebar-logo {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    vertical-align: middle;
+    margin-right: 5px;
+    position: relative; }
+    .pagebar .pagebar-logo i {
+      color: #ffffff; }
+  .pagebar .sidebar-header i.btn-close {
+    color: #ffffff;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 70px;
+    font-size: 12px;
+    width: 20px;
+    margin-top: 2px; }
+
+.pagebar-open .sidebar-overlay {
+  left: 0;
+  opacity: 1; }
+.pagebar-open .pagebar {
+  right: 0;
+  /* Template Auswahl f├╝r Content auf Seite */ }
+  .pagebar-open .pagebar .pagebar-container {
+    overflow-y: hidden;
+    position: absolute;
+    top: 0;
+    bottom: 51px;
+    width: 100%;
+    left: 0;
+    overflow-y: auto;
+    overflow-x: hidden; }
+  .pagebar-open .pagebar .pagebar-header .brand {
+    color: #fff;
+    text-align: left;
+    padding-left: 25px;
+    line-height: 70px;
+    font-size: 16px; }
+  .pagebar-open .pagebar #pagebar-collapse-btn a {
+    height: 100%;
+    display: block; }
+  .pagebar-open .pagebar .pagebar-menu {
+    font-size: 14px;
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    .pagebar-open .pagebar .pagebar-menu li a {
+      color: rgba(255, 255, 255, 0.5);
+      text-decoration: none;
+      display: block; }
+    .pagebar-open .pagebar .pagebar-menu ul {
+      /*submenu*/
+      list-style: none; }
+  .pagebar-open .pagebar .pagebar-menu > li.active > a, .pagebar-open .pagebar .pagebar-menu > li.active > a:hover {
+    background-color: #85CE36 !important;
+    color: #ffffff !important; }
+  .pagebar-open .pagebar .pagebar-menu > li > a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 15px; }
+    .pagebar-open .pagebar .pagebar-menu > li > a i {
+      color: #969696;
+      margin-right: 5px;
+      font-size: 16px; }
+      .pagebar-open .pagebar .pagebar-menu > li > a i.material-icons {
+        position: relative;
+        top: 2px; }
+    .pagebar-open .pagebar .pagebar-menu > li > a:hover {
+      color: #ffffff; }
+      .pagebar-open .pagebar .pagebar-menu > li > a:hover i {
+        color: #ffffff; }
+  .pagebar-open .pagebar .page-templatechooser.collapse.show, .pagebar-open .pagebar .page-delete-confirmation.collapse.show {
+    display: block; }
+  .pagebar-open .pagebar .page-templatechooser .description, .pagebar-open .pagebar .page-delete-confirmation .description {
+    color: rgba(255, 255, 255, 0.5);
+    padding: 3px;
+    margin-left: 5px; }
+  .pagebar-open .pagebar .page-templatechooser .card, .pagebar-open .pagebar .page-delete-confirmation .card {
+    margin: 5px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.5); }
+    .pagebar-open .pagebar .page-templatechooser .card:hover, .pagebar-open .pagebar .page-delete-confirmation .card:hover {
+      background: #3c4955;
+      border: 1px solid rgba(205, 205, 205, 0.9); }
+      .pagebar-open .pagebar .page-templatechooser .card:hover .templatename a, .pagebar-open .pagebar .page-delete-confirmation .card:hover .templatename a {
+        color: #ffffff; }
+    .pagebar-open .pagebar .page-templatechooser .card .card-body, .pagebar-open .pagebar .page-delete-confirmation .card .card-body {
+      padding: 3px; }
+      .pagebar-open .pagebar .page-templatechooser .card .card-body .templatename, .pagebar-open .pagebar .page-delete-confirmation .card .card-body .templatename {
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.5);
+        margin: 0px;
+        margin-bottom: 1px;
+        padding: 0px; }
+
+/*# sourceMappingURL=pagebar.css.map */
