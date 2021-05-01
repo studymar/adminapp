@@ -50,6 +50,6 @@ jobs:
           # destination path
           destination: /adminapp/prod/ # optional, default is .
           # hash filename
-          hashfile: # optional, default is hashes.sha256
+          hashfile: hashes.sha256 # optional, default is hashes.sha256
           # hash type
-          hashtype: # optional, default is sha256
+          hashtype: sha256 # optional, default is sha256
