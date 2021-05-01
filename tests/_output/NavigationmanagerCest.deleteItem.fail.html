@@ -1,0 +1,262 @@
+
+    <!-- Hauptmenu breit Start -->
+    <ul id="menu">
+                <li class="">
+                        <a href="/" target="" class="first ">Home</a>
+
+            
+                    </li>
+                <li class="">
+                        <a href="https://ttvn.click-tt.de" class=" " target="_blank">Click-tt</a>
+
+            
+                    </li>
+                <li class="">
+                        <a href="pokal" target="" class=" ">Pokal</a>
+
+            
+                    </li>
+                <li class="submenu-parent">
+                        <a href="#" class="keepOpenByClick  ">KM / RL</a>
+
+            
+                        <ul class="submenu">
+                                <li>
+                                <a href="kreismeisterschaften" class="">Kreismeisterschaften</a>
+
+                                </li>
+
+                            </ul>
+
+                    </li>
+                <li class="">
+                        <a href="anschriften" target="" class=" ">Anschriften</a>
+
+            
+                    </li>
+                <li class="submenu-parent">
+                        <a href="#" class="keepOpenByClick  ">Termine</a>
+
+            
+                        <ul class="submenu">
+                                <li>
+                                <a href="termine-damen-herren" class="">Termine Damen/Herren</a>
+
+                                </li>
+
+                                <li>
+                                <a href="termine-jugend" class="">Termine Jugend</a>
+
+                                </li>
+
+                            </ul>
+
+                    </li>
+                <li class="">
+                        <a href="links" target="" class=" ">Links</a>
+
+            
+                    </li>
+        
+        <!--
+        <li><nuxt-link  to="/" class="first">Home</nuxt-link></li>
+        <li><a href="#">Click-tt</a></li>
+        <li><a href="#">Pokal</a></li>
+        <li class="submenu-parent"><a href="#" v-on:click.prevent="menuClicked" class="active">KM / RL</a>
+            <ul class="submenu">
+                <li><a href="#">Kreismeisterschaften</a></li>
+                <li><a href="#">Ranglisten</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Anschriften</a></li>
+        <li class="submenu-parent"><a href="#" v-on:click.prevent="menuClicked">Termine</a>
+            <ul class="submenu">
+                <li><a href="#">Termine Damen/Herren</a></li>
+                <li><a href="#">Termine Jugend</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Downloads</a></li>
+        <li><a href="#">Links</a></li>
+        -->
+
+        <li class="divider"></li>
+                <li class="right-aligned user-menu submenu-parent"><a href="#" class="keepOpenByClick">Mein Menü</a>
+            <div class="flexBox">
+            <ul class="submenu">
+                <li class="headline">Mark Worthmann</li>
+                <li><a href="/account/my-account">Meine Daten</a></li>
+                <li><a href="/account/logout">Logout</a></li>
+
+                <li class="headline">TVV Neu Wulmstorf</li>
+                <li><a href="#">Vereinskontaktdaten pflegen</a></li>
+                <li><a href="#">Vereinsmeldung abgeben</a></li>
+            </ul>
+            <ul class="submenu">            
+                <li class="headline">Verwaltung</li>
+                <li><a href="/menu/navigationmanager">Hauptmenü verwalten</a></li>
+                <li><a href="/usermanager/index">Userverwaltung</a></li>
+                <li><a href="/rolemanager/index">Rollenverwaltung</a></li>
+
+                <li class="headline">Alle Vereine</li>
+                <li><a href="#">Vereine verwalten</a></li>
+                <li><a href="#">Vereinspositionen verwalten</a></li>
+                <li><a href="#">Vereinsmeldung verwalten</a></li>
+            </ul>
+            <ul class="submenu">            
+                <li class="headline">Spielbetrieb</li>
+                <li><a href="#">Spielzeiten/Saisons</a></li>
+                <li><a href="#">Spielklassen</a></li>
+            </ul>
+            </div>
+        </li>
+            </ul>
+    <!-- Hauptmenu Breit End -->
+    
+    
+    <!-- Hauptmenu Responsive Start -->
+    <ul id="menuResponsive">
+        <li class="submenu-parent"><a href="#" data-target="MainMenu" class="menuOpenByClickResponsive first hamburger submenu-parent">Menü</a>
+            <ul class="submenu hide" id="MainMenu">
+                <!--
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Click-tt</a></li>
+                <li><a href="#">Pokal</a></li>
+                <li class="submenu-parent"><a href="#" v-on:click.prevent="menuClickedResponsive('KMMenu',$event)" class="active">KM / RL >></a>
+                </li>
+                <li><a href="#">Anschriften</a></li>
+                <li class="submenu-parent"><a href="#" v-on:click.prevent="menuClickedResponsive('TerminMenu',$event)">Termine >></a>
+                </li>
+                <li><a href="#">Downloads</a></li>
+                <li><a href="#">Links</a></li>
+                -->
+                                <li class="">
+                                        <a href="/" target="" class="">Home</a>
+                                    </li>
+                                                <li class="">
+                                        <a href="https://ttvn.click-tt.de" class="" target="_blank">Click-tt</a>
+                                    </li>
+                                                <li class="">
+                                        <a href="pokal" target="" class="">Pokal</a>
+                                    </li>
+                                                <li class="submenu-parent">
+                                        <a href="#" data-target="Sub1" class="menuOpenByClickResponsive ">KM / RL <i class="material-icons">arrow_drop_down</i></a>
+                                    </li>
+                                                <li class="">
+                                        <a href="anschriften" target="" class="">Anschriften</a>
+                                    </li>
+                                                <li class="submenu-parent">
+                                        <a href="#" data-target="Sub2" class="menuOpenByClickResponsive ">Termine <i class="material-icons">arrow_drop_down</i></a>
+                                    </li>
+                                                <li class="">
+                                        <a href="links" target="" class="">Links</a>
+                                    </li>
+                                            </ul>
+        </li>
+
+
+        <li class="divider"></li>
+        <!--
+        <li class="right-aligned user-menu"><a href="#" data-target="MainMenu" class="menuOpenByClickResponsive hamburger submenu-parent">Mein Menü</a></li>
+            <div class="flexBox">
+            <ul class="submenu">
+                <li class="headline">Mein Account</li>
+                <li><nuxt-link to="/meinedaten">Meine Daten</nuxt-link ></li>
+                <li><a href="/account/logout">Logout</a></li>
+                <li class="headline">Mein Verein (TVV Neu Wulmstorf)</li>
+                <li><a href="#">Vereinskontaktdaten pflegen</a></li>
+                <li><a href="#">Vereinsmeldung abgeben</a></li>
+            </ul>
+            <ul class="submenu">
+                <li class="headline">Verwaltung</li>
+                <li><nuxt-link  to="/navigation">Hauptmenü verwalten</nuxt-link></li>
+                <li><nuxt-link  to="/usermanager">Userverwaltung</nuxt-link></li>
+                <li><nuxt-link to="/usermanager/roles">Rollenverwaltung</nuxt-link></li>
+
+                <li class="headline">Alle Vereine</li>
+                <li><a href="#">Vereine verwalten</a></li>
+                <li><a href="#">Vereinspositionen verwalten</a></li>
+                <li><a href="#">Vereinsmeldung verwalten</a></li>
+            </ul>
+            <ul class="submenu">            
+                <li class="headline">Spielbetrieb</li>
+                <li><a href="#">Spielzeiten/Saisons</a></li>
+                <li><a href="#">Spielklassen</a></li>
+            </ul>
+            </div>
+        </li>
+        -->
+                <li class="right-aligned user-menu"><a href="#" data-target="flyerBox" class="menuOpenByClickResponsive hamburger submenu-parent">Mein Menü</a>
+        <div class="flyerBox hide" id="flyerBox">
+            <div class="flexBox">
+            <ul class="submenu">
+                <li class="headline">Mein Account</li>
+                <li><a href="/account/my-account">Meine Daten</a></li>
+                <li><a href="/account/logout">Logout</a></li>
+                <li class="headline">Mein Verein (TVV Neu Wulmstorf)</li>
+                <li><a href="#">Vereinskontaktdaten pflegen</a></li>
+                <li><a href="#">Vereinsmeldung abgeben</a></li>
+            </ul>
+            <ul class="submenu">
+                <li class="headline">Verwaltung</li>
+                <li><a href="/menu/navigationmanager">Hauptmenü verwalten</a></li>
+                <li><a href="/usermanager/index">Userverwaltung</a></li>
+                <li><a href="/rolemanager/index">Rollenverwaltung</a></li>
+
+                <li class="headline">Alle Vereine</li>
+                <li><a href="#">Vereine verwalten</a></li>
+                <li><a href="#">Vereinspositionen verwalten</a></li>
+                <li><a href="#">Vereinsmeldung verwalten</a></li>
+            </ul>
+            <ul class="submenu">            
+                <li class="headline">Spielbetrieb</li>
+                <li><a href="#">Spielzeiten/Saisons</a></li>
+                <li><a href="#">Spielklassen</a></li>
+            </ul>
+            </div>
+        </div>
+                <li>
+                        <ul class="submenu hide" id="Sub1">
+                <li><a href="#" data-target="MainMenu" class="menuOpenByClickResponsive"> Zurück <i class="material-icons">arrow_drop_up</i></a></li>
+                                <li>
+                                        
+                      <a href="kreismeisterschaften" class="">Kreismeisterschaften</a>
+                                      </li>
+                            </ul>
+                        <ul class="submenu hide" id="Sub2">
+                <li><a href="#" data-target="MainMenu" class="menuOpenByClickResponsive"> Zurück <i class="material-icons">arrow_drop_up</i></a></li>
+                                <li>
+                                        
+                      <a href="termine-damen-herren" class="">Termine Damen/Herren</a>
+                                      </li>
+                                <li>
+                                        
+                      <a href="termine-jugend" class="">Termine Jugend</a>
+                                      </li>
+                            </ul>
+                        <!--
+            <ul class="submenu hide" id="submenuLayer">
+                <li><a href="#" v-on:click.prevent="menuClickedResponsive('MainMenu',$event)"> Zurück <i class="material-icons">arrow_drop_up</i></a></li>
+                <li v-for="subitem in subnavigation" :key="subitem.id" >
+                    <nuxt-link v-bind:to="(subitem.path)?subitem.path:'/'" @click.native.prevent="closeSubmenu($event)" v-bind:class="{active: subitem.active}" v-if="subitem.external == '0'">{{subitem.name}}</nuxt-link>
+                    <a v-bind:href="(subitem.path)?subitem.path:'/'" v-on:click.prevent="closeSubmenu($event)" v-bind:class="{active: subitem.active}" target="_blank" v-else>{{subitem.name}}</a>
+                </li>
+            </ul>
+            -->
+            <!--
+            <ul class="submenu hide" id="KMMenu">
+                <li><a href="#" v-on:click.prevent="menuClickedResponsive('MainMenu',$event)"> Zurück <i class="material-icons">arrow_drop_up</i></a></li>
+                <li><a href="#">Kreismeisterschaften</a></li>
+                <li><a href="#">Ranglisten</a></li>
+            </ul>
+            <ul class="submenu hide" id="TerminMenu">
+                <li><a href="#" v-on:click.prevent="menuClickedResponsive('MainMenu',$event)"> Zurück <i class="material-icons">arrow_drop_up</i></a></li>
+                <li><a href="#">Termine Damen/Herren</a></li>
+                <li><a href="#">Termine Jugend</a></li>
+            </ul>
+            -->
+        </li>
+    </ul>    
+    <!-- Hauptmenu Responsive End -->
+    
+    
+    

@@ -1,0 +1,10 @@
+
+Start der Tests:
+vendor\bin\codecept run functional
+
+vendor\bin\codecept run unit
+
+vendor\bin\codecept run acceptance
+
+oder alle gleichzeitig
+vendor\bin\codecept run

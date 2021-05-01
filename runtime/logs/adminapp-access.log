@@ -1,0 +1,17 @@
+127.0.0.1 - - [01/May/2021:17:46:30 +0200] "GET /voting/edit HTTP/1.1" 200 78439
+127.0.0.1 - - [01/May/2021:17:46:30 +0200] "GET /css/app.css HTTP/1.1" 304 -
+127.0.0.1 - - [01/May/2021:17:46:30 +0200] "GET /ext/vee-validate/dist/vee-validate.js HTTP/1.1" 304 -
+127.0.0.1 - - [01/May/2021:17:46:30 +0200] "GET /assets/fd105bb0/yii.js HTTP/1.1" 200 20934
+127.0.0.1 - - [01/May/2021:17:46:30 +0200] "GET /js/app.js HTTP/1.1" 304 -
+127.0.0.1 - - [01/May/2021:17:46:30 +0200] "GET /js/form-validation.js HTTP/1.1" 304 -
+127.0.0.1 - - [01/May/2021:17:46:30 +0200] "GET /css/form.css HTTP/1.1" 304 -
+127.0.0.1 - - [01/May/2021:17:46:30 +0200] "GET /css/vendor.css HTTP/1.1" 304 -
+127.0.0.1 - - [01/May/2021:17:46:30 +0200] "GET /ext/@ckeditor/ckeditor5-build-classic/build/ckeditor.js HTTP/1.1" 304 -
+127.0.0.1 - - [01/May/2021:17:46:30 +0200] "GET /ext/@ckeditor/ckeditor5-vue2/dist/ckeditor.js HTTP/1.1" 304 -
+127.0.0.1 - - [01/May/2021:17:46:30 +0200] "GET /ext/vee-validate/dist/rules.umd.js HTTP/1.1" 200 22954
+127.0.0.1 - - [01/May/2021:17:46:30 +0200] "GET /js/vendor.js HTTP/1.1" 304 -
+127.0.0.1 - - [01/May/2021:17:46:30 +0200] "GET /js/form.js HTTP/1.1" 304 -
+127.0.0.1 - - [01/May/2021:17:46:30 +0200] "GET /css/customlayout.css HTTP/1.1" 304 -
+127.0.0.1 - - [01/May/2021:17:46:31 +0200] "GET /content/images/placeholder/kreiskarteTT.gif HTTP/1.1" 304 -
+127.0.0.1 - - [01/May/2021:17:46:31 +0200] "POST /voting/get-all-topics/ HTTP/1.1" 200 385
+127.0.0.1 - - [01/May/2021:17:46:35 +0200] "POST /voting/get-all-votings/2 HTTP/1.1" 200 1260

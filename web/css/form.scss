@@ -1,0 +1,169 @@
+/* 
+    Created on : 05.09.2018, 22:10:36
+    Author     : Mark WOrthmann
+*/
+
+/* Label bei horizontal-forms mittig in der ersten zeile, außer bei required */
+.col-form-label {
+    padding-top: 2px;
+}
+
+/* required fields mit * markieren */
+div.required label.control-label:after {
+    content: " *";
+    color: red;
+    padding-top:1px;
+}
+
+.form-group {
+    .has-error {
+        input {
+            border: 1px solid red;
+        }
+    }
+    &.is-invalid {
+        input {
+            border: 1px solid red !important;
+        }        
+    }
+}
+
+#content label {
+    padding-left: 0px;
+}
+
+
+/* roter border bei inputfeldern mit error */
+.form-group.has-error input {
+    border: 1px solid red;
+}
+/*
+.form-group.has-error label {
+    color: red;
+}
+*/
+.help-block-error {
+    color: red !important;
+}
+.help-block {
+    color: #6c757d;
+    font-size: 10px;
+}
+
+.form-list {
+    .form-list-headline {
+        font-weight: bold;
+        margin: 5px 0px;
+    }
+    label {
+        display: block;
+        margin-left: 10px;
+    }
+}
+
+button.isChanged {
+    background-color: red;
+}
+
+.button-line {
+    position: relative;
+    .right-aligned {
+        position: absolute;
+        right: 0px;
+    }
+}
+
+.release-manager {
+    border-radius: 1em/1em;
+    border: 1px solid silver;
+    padding: 5px;
+    margin: 5px 0px;
+    .release-boxes {
+        margin-top: 5px;
+    }
+    .release-isreleased .help-block {
+        display: none;
+    }
+    .release-dates-opener-line {
+        margin-bottom: 5px;
+        a {
+            font-weight: normal;
+            font-style: italic;
+        }
+    }
+}
+
+
+.link-manager {
+    a#linkItem-delete-link {
+        font-size: 7pt;
+        font-style: italic;
+    }
+    a#Linktype-intern-select-link {
+        font-weight: normal;
+    }
+    a#linkItem-extern-link {
+        font-weight: normal;
+    }
+    .radios {
+        
+    }
+    /*
+    .after-select {
+        display:none;
+    }
+    */
+}
+
+
+
+.image-wrap-button {
+    padding: 10px 17px;
+    .button {
+    }
+}
+
+#documentmanager-searchform, #page-select-form {
+    margin-bottom: 5px;
+}
+
+.openDocumentHoverByLink {
+    color: #212529;
+    background-color: #e2e6ea;
+    border-color: #dae0e5;
+}
+
+.vue-dropzone {
+    /* border: 2px dotted #e5e5e5 !important;*/
+    height: 140px; 
+    width: 120px;
+}
+.dropzone .dz-message {
+    margin: 0px !important;
+}
+
+.document-manager .vue-dropzone {
+    height: auto;
+    width: auto;
+}
+.dropzone {
+    min-height: auto !important;
+    margin-bottom: 1rem;
+}
+.document-manager .dropzone {
+    padding: 0px;
+}
+
+
+/* Form field validation */
+.invalid {
+    display: block;
+    width: 100%;
+    margin-top: 0px;
+    font-size: 80%;
+    color: #dc3545;
+}
+
+.row {
+    margin-bottom: 5px;
+}

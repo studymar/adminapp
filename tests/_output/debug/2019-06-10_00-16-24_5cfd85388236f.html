@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html lang="de-DE">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title></title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="/css/layout.css" rel="stylesheet">
+<link href="/css/menu.css" rel="stylesheet">
+<link href="/css/form.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" rel="stylesheet">
+<link href="/ext/vue2Dropzone/vue2Dropzone.min.css" rel="stylesheet" position="1">
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/flatpickr@4.5.7/dist/flatpickr.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue-flatpickr-component@latest/dist/vue-flatpickr.js"></script>
+<script src="/js/form.js"></script>
+<script src="/ext/vee-validate/vee-validate.js"></script>
+<script src="/ext/vee-validate/de.js"></script>
+<script src="/ext/vue2Dropzone/vue2Dropzone.js"></script></head>
+<body>
+
+    <div>
+        <div id="bar"></div>
+        <div id="top">
+        <div id="wrapper">
+
+            <!-- Header -->
+            <div id="header">
+            <h1><a href="/">TTKV Harburg-Land e.V.</a></h1>
+            <p class="title">Tischtennis in der südlichen Metropolregion von Hamburg</p>
+            </div> <!-- Header end -->
+
+            <!-- Menu -->
+            <div id="menu-box" class="cleaning-box">
+              
+    <!-- Hauptmenu breit Start -->
+    <ul id="menu">
+                <li class="">
+                        <a href="/" target="" class="first ">Home</a>
+
+            
+                    </li>
+                <li class="">
+                        <a href="https://ttvn.click-tt.de" class=" " target="_blank">Click-tt</a>
+
+            
+                    </li>
+                <li class="">
+                        <a href="pokal" target="" class=" ">Pokal</a>
+
+            
+                    </li>
+                <li class="submenu-parent">
+                        <a href="#" class="keepOpenByClick  ">KM / RL</a>
+
+            
+                        <ul class="submenu">
+                                <li>
+                                <a href="kreismeisterschaften" class="">Kreismeisterschaften</a>
+
+                                </li>
+
+                            </ul>
+
+                    </li>
+                <li class="">
+                        <a href="anschriften" target="" class=" ">Anschriften</a>
+
+            
+                    </li>
+                <li class="submenu-parent">
+                        <a href="#" class="keepOpenByClick  ">Termine</a>
+
+            
+                        <ul class="submenu">
+                                <li>
+                                <a href="termine-damen-herren" class="">Termine Damen/Herren</a>
+
+                                </li>
+
+                                <li>
+                                <a href="termine-jugend" class="">Termine Jugend</a>
+
+                                </li>
+
+                            </ul>
+
+                    </li>
+                <li class="">
+                        <a href="links" target="" class=" ">Links</a>
+
+            
+                    </li>
+        
+        <!--
+        <li><nuxt-link  to="/" class="first">Home</nuxt-link></li>
+        <li><a href="#">Click-tt</a></li>
+        <li><a href="#">Pokal</a></li>
+        <li class="submenu-parent"><a href="#" v-on:click.prevent="menuClicked" class="active">KM / RL</a>
+            <ul class="submenu">
+                <li><a href="#">Kreismeisterschaften</a></li>
+                <li><a href="#">Ranglisten</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Anschriften</a></li>
+        <li class="submenu-parent"><a href="#" v-on:click.prevent="menuClicked">Termine</a>
+            <ul class="submenu">
+                <li><a href="#">Termine Damen/Herren</a></li>
+                <li><a href="#">Termine Jugend</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Downloads</a></li>
+        <li><a href="#">Links</a></li>
+        -->
+
+        <li class="divider"></li>
+                <li class="right-aligned user-menu submenu-parent"><a href="#" class="keepOpenByClick">Mein Menü</a>
+            <div class="flexBox">
+            <ul class="submenu">
+                <li class="headline">Mark Worthmann</li>
+                <li><a href="/account/my-account">Meine Daten</a></li>
+                <li><a href="/account/logout">Logout</a></li>
+
+                <li class="headline">TVV Neu Wulmstorf</li>
+                <li><a href="#">Vereinskontaktdaten pflegen</a></li>
+                <li><a href="#">Vereinsmeldung abgeben</a></li>
+            </ul>
+            <ul class="submenu">            
+                <li class="headline">Verwaltung</li>
+                <li><a href="/menu/navigationmanager">Hauptmenü verwalten</a></li>
+                <li><a href="/usermanager/index">Userverwaltung</a></li>
+                <li><a href="/rolemanager/index">Rollenverwaltung</a></li>
+
+                <li class="headline">Alle Vereine</li>
+                <li><a href="#">Vereine verwalten</a></li>
+                <li><a href="#">Vereinspositionen verwalten</a></li>
+                <li><a href="#">Vereinsmeldung verwalten</a></li>
+            </ul>
+            <ul class="submenu">            
+                <li class="headline">Spielbetrieb</li>
+                <li><a href="#">Spielzeiten/Saisons</a></li>
+                <li><a href="#">Spielklassen</a></li>
+            </ul>
+            </div>
+        </li>
+            </ul>
+    <!-- Hauptmenu Breit End -->
+    
+    
+    <!-- Hauptmenu Responsive Start -->
+    <ul id="menuResponsive">
+        <li class="submenu-parent"><a href="#" data-target="MainMenu" class="menuOpenByClickResponsive first hamburger submenu-parent">Menü</a>
+            <ul class="submenu hide" id="MainMenu">
+                <!--
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Click-tt</a></li>
+                <li><a href="#">Pokal</a></li>
+                <li class="submenu-parent"><a href="#" v-on:click.prevent="menuClickedResponsive('KMMenu',$event)" class="active">KM / RL >></a>
+                </li>
+                <li><a href="#">Anschriften</a></li>
+                <li class="submenu-parent"><a href="#" v-on:click.prevent="menuClickedResponsive('TerminMenu',$event)">Termine >></a>
+                </li>
+                <li><a href="#">Downloads</a></li>
+                <li><a href="#">Links</a></li>
+                -->
+                                <li class="">
+                                        <a href="/" target="" class="">Home</a>
+                                    </li>
+                                                <li class="">
+                                        <a href="https://ttvn.click-tt.de" class="" target="_blank">Click-tt</a>
+                                    </li>
+                                                <li class="">
+                                        <a href="pokal" target="" class="">Pokal</a>
+                                    </li>
+                                                <li class="submenu-parent">
+                                        <a href="#" data-target="Sub1" class="menuOpenByClickResponsive ">KM / RL <i class="material-icons">arrow_drop_down</i></a>
+                                    </li>
+                                                <li class="">
+                                        <a href="anschriften" target="" class="">Anschriften</a>
+                                    </li>
+                                                <li class="submenu-parent">
+                                        <a href="#" data-target="Sub2" class="menuOpenByClickResponsive ">Termine <i class="material-icons">arrow_drop_down</i></a>
+                                    </li>
+                                                <li class="">
+                                        <a href="links" target="" class="">Links</a>
+                                    </li>
+                                            </ul>
+        </li>
+
+
+        <li class="divider"></li>
+        <!--
+        <li class="right-aligned user-menu"><a href="#" data-target="MainMenu" class="menuOpenByClickResponsive hamburger submenu-parent">Mein Menü</a></li>
+            <div class="flexBox">
+            <ul class="submenu">
+                <li class="headline">Mein Account</li>
+                <li><nuxt-link to="/meinedaten">Meine Daten</nuxt-link ></li>
+                <li><a href="/account/logout">Logout</a></li>
+                <li class="headline">Mein Verein (TVV Neu Wulmstorf)</li>
+                <li><a href="#">Vereinskontaktdaten pflegen</a></li>
+                <li><a href="#">Vereinsmeldung abgeben</a></li>
+            </ul>
+            <ul class="submenu">
+                <li class="headline">Verwaltung</li>
+                <li><nuxt-link  to="/navigation">Hauptmenü verwalten</nuxt-link></li>
+                <li><nuxt-link  to="/usermanager">Userverwaltung</nuxt-link></li>
+                <li><nuxt-link to="/usermanager/roles">Rollenverwaltung</nuxt-link></li>
+
+                <li class="headline">Alle Vereine</li>
+                <li><a href="#">Vereine verwalten</a></li>
+                <li><a href="#">Vereinspositionen verwalten</a></li>
+                <li><a href="#">Vereinsmeldung verwalten</a></li>
+            </ul>
+            <ul class="submenu">            
+                <li class="headline">Spielbetrieb</li>
+                <li><a href="#">Spielzeiten/Saisons</a></li>
+                <li><a href="#">Spielklassen</a></li>
+            </ul>
+            </div>
+        </li>
+        -->
+                <li class="right-aligned user-menu"><a href="#" data-target="flyerBox" class="menuOpenByClickResponsive hamburger submenu-parent">Mein Menü</a>
+        <div class="flyerBox hide" id="flyerBox">
+            <div class="flexBox">
+            <ul class="submenu">
+                <li class="headline">Mein Account</li>
+                <li><a href="/account/my-account">Meine Daten</a></li>
+                <li><a href="/account/logout">Logout</a></li>
+                <li class="headline">Mein Verein (TVV Neu Wulmstorf)</li>
+                <li><a href="#">Vereinskontaktdaten pflegen</a></li>
+                <li><a href="#">Vereinsmeldung abgeben</a></li>
+            </ul>
+            <ul class="submenu">
+                <li class="headline">Verwaltung</li>
+                <li><a href="/menu/navigationmanager">Hauptmenü verwalten</a></li>
+                <li><a href="/usermanager/index">Userverwaltung</a></li>
+                <li><a href="/rolemanager/index">Rollenverwaltung</a></li>
+
+                <li class="headline">Alle Vereine</li>
+                <li><a href="#">Vereine verwalten</a></li>
+                <li><a href="#">Vereinspositionen verwalten</a></li>
+                <li><a href="#">Vereinsmeldung verwalten</a></li>
+            </ul>
+            <ul class="submenu">            
+                <li class="headline">Spielbetrieb</li>
+                <li><a href="#">Spielzeiten/Saisons</a></li>
+                <li><a href="#">Spielklassen</a></li>
+            </ul>
+            </div>
+        </div>
+                <li>
+                        <ul class="submenu hide" id="Sub1">
+                <li><a href="#" data-target="MainMenu" class="menuOpenByClickResponsive"> Zurück <i class="material-icons">arrow_drop_up</i></a></li>
+                                <li>
+                                        
+                      <a href="kreismeisterschaften" class="">Kreismeisterschaften</a>
+                                      </li>
+                            </ul>
+                        <ul class="submenu hide" id="Sub2">
+                <li><a href="#" data-target="MainMenu" class="menuOpenByClickResponsive"> Zurück <i class="material-icons">arrow_drop_up</i></a></li>
+                                <li>
+                                        
+                      <a href="termine-damen-herren" class="">Termine Damen/Herren</a>
+                                      </li>
+                                <li>
+                                        
+                      <a href="termine-jugend" class="">Termine Jugend</a>
+                                      </li>
+                            </ul>
+                        <!--
+            <ul class="submenu hide" id="submenuLayer">
+                <li><a href="#" v-on:click.prevent="menuClickedResponsive('MainMenu',$event)"> Zurück <i class="material-icons">arrow_drop_up</i></a></li>
+                <li v-for="subitem in subnavigation" :key="subitem.id" >
+                    <nuxt-link v-bind:to="(subitem.path)?subitem.path:'/'" @click.native.prevent="closeSubmenu($event)" v-bind:class="{active: subitem.active}" v-if="subitem.external == '0'">{{subitem.name}}</nuxt-link>
+                    <a v-bind:href="(subitem.path)?subitem.path:'/'" v-on:click.prevent="closeSubmenu($event)" v-bind:class="{active: subitem.active}" target="_blank" v-else>{{subitem.name}}</a>
+                </li>
+            </ul>
+            -->
+            <!--
+            <ul class="submenu hide" id="KMMenu">
+                <li><a href="#" v-on:click.prevent="menuClickedResponsive('MainMenu',$event)"> Zurück <i class="material-icons">arrow_drop_up</i></a></li>
+                <li><a href="#">Kreismeisterschaften</a></li>
+                <li><a href="#">Ranglisten</a></li>
+            </ul>
+            <ul class="submenu hide" id="TerminMenu">
+                <li><a href="#" v-on:click.prevent="menuClickedResponsive('MainMenu',$event)"> Zurück <i class="material-icons">arrow_drop_up</i></a></li>
+                <li><a href="#">Termine Damen/Herren</a></li>
+                <li><a href="#">Termine Jugend</a></li>
+            </ul>
+            -->
+        </li>
+    </ul>    
+    <!-- Hauptmenu Responsive End -->
+    
+    
+                </div> <!-- Menu end -->
+
+            <hr class="noscreen" />
+            <div id="skip-menu"></div>
+
+            <div id="content"> 
+
+                <div id="column-1">
+                    <div class="content" id="content1">
+                        <template id="linkcomponent">
+    
+    <span v-if="linkItem != null">
+        <!-- Kein Link -->
+        <div class="row link-manager" v-if="linkItem.target_page_id==null && linkItem.extern_url==null">
+            <label class="control-label col-sm-3">Verlinkung</label>
+            <div class="col-sm-9 radios">
+                <div>
+                    <div class="radio">
+                        <label><input type="radio" name="LinkItem[type]" v-model="showLinkExternInput" v-bind:value="false" v-on:click="selectLinkFromPagemanager"> Seitenauswahl</label>
+                    </div>
+                    <div class="radio">
+                        <label><input type="radio" id="Linktype-extern" name="LinkItem[type]" v-model="showLinkExternInput" v-bind:value="true"> oder externen Link eingeben</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Show Intern Link -->
+        <div class="row link-manager" v-else-if="linkItem.target_page_id!=null">
+            <label class="control-label col-sm-3">Verlinkung Intern</label>
+            <div class="col-sm-9">
+                <div>
+                    <a v-bind:href="'/'+linkItem.targetPage.urlname" target="_blank">{{linkItem.targetPage.linkname}}</a>
+                    <a href="#" id="linkItem-delete-link" v-on:click.prevent="removeLink">(Verlinkung entfernen)</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Show Extern Link -->
+        <div class="row link-manager" v-else-if="linkItem.extern_url!=null && showLinkExternInput == null">
+            <label class="control-label col-sm-3">Verlinkung Extern</label>
+            <div class="col-sm-9">
+                <div>
+                    <a v-bind:href="linkItem.extern_url" id="linkItem-extern-link" target="_blank">{{linkItem.extern_url}}</a>
+                    <a href="#" id="linkItem-delete-link" v-on:click.prevent="removeLink">(Verlinkung entfernen)</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Extern Link Input Field -->
+        <div class="row link-manager required" id="Linktype-extern-form" v-if="showLinkExternInput == true">
+            <label class="control-label col-sm-3" for="teaser-headline">Verlinkung Extern</label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control" name="LinkItem[extern_url]" v-model="linkItem.extern_url" aria-required="true" placeholder='https://'>
+                <p class="help-block help-block-error "></p>
+            </div>
+        </div> 
+    </span>
+
+    
+</template>
+
+<script type="text/javascript">
+
+var linkcomponent = {
+    template: '#linkcomponent',
+    props: ['linkItem'],
+    data: function(){
+        return {
+            showLinkExternInput: null /* InputFeld für externen Link anzeigen? */
+        }
+    },
+    methods: {
+        removeLink() {
+            this.linkItem.extern_url        = null
+            this.linkItem.target_page_id    = null
+            this.linkItem.targetPage            = {}
+            this.linkItem.targetPage.linkname   = null
+            this.linkItem.targetPage.urlname    = null
+            this.$emit('changed')
+        },
+        selectLinkFromPagemanager() {
+            this.showLinkExternInput = false
+            this.$emit('select-link-from-pagemanager')
+        }
+    }
+}
+
+</script>
+
+<template id="imagecomponent">
+    
+    <span v-if="imageList != null">
+        <!-- Kein Link -->
+        <div class="row image-item" v-if="imageList.uploadedimages.length == 0">
+            <label class="control-label col-sm-3">Image</label>
+            <div class="col-sm-9 radios">
+                <div>
+                    <div>
+                        <div class="noImage-text">Kein image</div>
+                        <a href="#" v-on:click.prevent="selectImageFromImagemanager"> Image auswählen</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Show Image -->
+        <div class="row image-item" v-else-if="imageList.uploadedimages.length > 0">
+            <label class="control-label col-sm-3">
+                Image<br>
+                <a href="#" class="editImageLink" v-on:click.prevent="selectImageFromImagemanager"> Imagemanager</a>
+            </label>
+            <div class="col-sm-9 list column">
+                <div class="card image mb-3" v-for="item in imageList.uploadedimages" v-bind:key="item.id">
+                    <div class="card-img-top-wrapper">
+                        <img class="card-img-top" v-bind:src="'/content/images/up/' + item.filename">
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text text-muted">
+                            {{item.name}}
+                        </p>
+                    </div>
+                </div>
+
+                <!--
+                <div>
+                    <img v-bind:src="'/content/images/up/' + imageList.uploadedimages[0].filename" target="_blank"/>
+                    <a href="#" id="linkItem-delete-link" v-on:click.prevent="removeImage">(Image entfernen)</a>
+                </div>
+                -->
+            </div>
+        </div>
+
+    </span>
+    
+    
+</template>
+
+<script type="text/javascript">
+
+var imagecomponent = {
+    template: '#imagecomponent',
+    props: ['imageList'],
+    data: function(){
+        return {
+        }
+    },
+    methods: {
+        removeImage() {
+            this.$parent.changed()
+        },
+        selectImageFromImagemanager() {
+            this.$parent.selectImageFromImagemanager()
+        }
+    }
+}
+
+</script>
+
+
+<template id="releasecomponent">
+    
+    <!-- Releasemanager -->
+    <div class="release-manager" v-if="releaseItem != null">
+        <div class="release-boxes">
+            <div class="row field-release-is_released">
+                <label class="control-label col-sm-3">Öffentlich sichtbar</label>
+                <div class="col-sm-9">
+                    <input type="hidden" name="Release[is_released]" value="">
+                    <div id="release-is_released">
+                        <div class="radio"><label><input type="radio" name="Release[is_released]" value="1" v-model="releaseItem.is_released"> Ja</label></div>
+                        <div class="radio"><label><input type="radio" name="Release[is_released]" value="0" v-model="releaseItem.is_released" checked=""> Nein</label></div>
+                    </div>
+                    <p class="help-block help-block-error "></p>
+                </div>
+            </div>
+        </div>
+        <div class="release-dates-opener-line">
+            <a data-toggle="collapse" href="#release-dates">>> bei bedarf Veröffentlichungszeitraum eintragen</a>
+        </div>
+        <div class="release-dates collapse" v-bind:class="{show: releaseItem.from_date}" id="release-dates">
+            <div class="row field-release-from_date">
+                <label class="control-label col-sm-3" for="release-from_date">Sichtbar ab</label>
+                <div class="col-sm-3">
+                    <flat-pickr v-model="releaseItem.from_date" :config="config" class="form-control" placeholder="Select a date" name="releaseItem.from_date"></flat-pickr>
+                    <!--<input type="text" id="release-from_date" class="form-control datepicker flatpickr-input" name="Release[from_date]" v-model="releaseItem.from_date" >-->
+                    <!-- data-provide="datepicker" -->
+                    <p class="help-block help-block-error "></p>
+                </div>
+            </div>
+            <div class="row field-release-to_date">
+                <label class="control-label col-sm-3" for="release-to_date">Sichtbar bis</label>
+                <div class="col-sm-3">
+                    <flat-pickr v-model="releaseItem.to_date" :config="config" class="form-control"  placeholder="Select a date" name="releaseItem.to_date"></flat-pickr>
+                    <!--<input type="text" id="release-to_date" class="form-control datepicker flatpickr-input" name="Release[to_date]" v-model="releaseItem.to_date" readonly="readonly">-->
+                    <p class="help-block help-block-error "></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script type="text/javascript">
+var releasecomponent = {
+    template: '#releasecomponent',
+    props: ['releaseItem'],
+    components: {
+        
+    },
+    data: function(){
+        return {
+            release: {
+                from_date: '' //default-Wert setzen
+            },
+            config: {
+                altFormat: "d.m.Y", //"d.m.Y" Anzeigeformat - unabhängig vom Format des Feldes
+                dateFormat: "d.m.Y", //"Y-m-d"Format für Variable (so wird es gespeichert)
+                altInput: false,
+                weekNumbers: true,
+                allowInput: true //manuelle Eingabe?
+            }
+        }
+    },
+    mounted: function() {
+        this.onLoad()
+    },
+    methods: {
+        onLoad() {
+        },
+        getDate: function (event) {
+            this.$emit('changed')
+        }
+    }
+}
+
+</script>
+<template id="paginationcomponent">
+
+    <!-- Pagination -->
+    <nav v-if="pagination">
+      <ul class="pagination pagination-sm justify-content-end">
+        <li class="page-item" v-if="pagination.activePage>0">
+          <a class="page-link" href="#" aria-label="Previous" v-on:click.prevent="getItemsOnPage(pagination.activePage-1)">
+            <span aria-hidden="true">&laquo;</span>
+            <span class="sr-only">Previous</span>
+          </a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#" v-on:click.prevent="getItemsOnPage(pagination.activePage-1)" v-if="pagination.activePage>0">{{pagination.activePage}}</a></li>
+        <li class="page-item active"><a class="page-link" v-on:click.prevent="getItemsOnPage(pagination.activePage)" href="#">{{pagination.activePage+1}}</a></li>
+        <li class="page-item"><a class="page-link" href="#" v-on:click.prevent="getItemsOnPage(pagination.activePage+1)" v-if="pagination.activePage < pagination.lastPage">{{pagination.activePage+2}}</a></li>
+        <li class="page-item" v-if="pagination.activePage < pagination.lastPage">
+          <a class="page-link" href="#" aria-label="Next" v-on:click.prevent="getItemsOnPage(pagination.activePage+1)">
+            <span aria-hidden="true">&raquo;</span>
+            <span class="sr-only">Next</span>
+          </a>
+        </li>
+      </ul>
+    </nav>    
+
+</template>
+
+<script type="text/javascript">
+var paginationcomponent = {
+    template: '#paginationcomponent',
+    props: {
+        pagination: Object
+    },
+    components: {
+    },
+    data: function(){
+        return {
+        }
+    },
+    mounted: function() {
+    },
+    methods: {
+        getItemsOnPage(pageNo){
+            this.pagination.activePage = pageNo
+            this.$parent.getItems()
+        }
+    }
+}
+
+</script>
+
+<template id="pagemanagercomponent">
+    <span>
+
+    <!-- Pagemanager -->
+    <h3>Seitenauswahl</h3>
+    <div class="list">
+        <p class="alert alert-danger" v-if="topError">{{topErrorMessage}}</p>
+        <form v-on:submit.prevent="onSubmit" method="POST">
+            <div class="row">
+                <label class="control-label col-sm-3" for="searchstring">Suche</label>
+                <div class="col-sm-9">
+                    <input type="text" id="searchstring" class="form-control" name="Searchstring" v-model="form.searchstring" v-on:change="getItems" aria-required="true">
+                    <p class="help-block help-block-error ">{{(form.errorMessages)?form.errorMessages.searchstring[0]:''}}</p>
+                </div>
+            </div>
+        </form>
+        
+        <nav v-if="pagination">
+            <div class="pagination pagination-sm justify-content-end" v-if="pagination">
+                {{pagination.totalCount}} Ergebnisse
+            </div>  
+        </nav>
+        <div class="">
+            <div class="card mb-3" v-for="item in items" v-bind:key="item.id">
+                <div class="card-doc-top"></div>
+                <div class="card-body">
+                    <h5 class="card-title">{{item.headline}}</h5>
+                    <p class="card-text">
+                        Erstellt: {{item.created}} von {{item.created_by}}
+                    </p>
+                    <a href="#" v-on:click.prevent="selectItem(item)" class="btn btn-primary saveLink" data-id="">Auswählen</a>
+                    <a v-bind:href="'/'+item.urlname" target="_blank" class="btn btn-light">Seite anzeigen</a>
+                    <!--<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>-->
+                </div>
+            </div>
+            <paginationcomponent v-bind:pagination="pagination"></paginationcomponent>
+        </div>
+        
+        <button v-on:click="$parent.closePagemanager()" class="btn btn-outline-primary">Zurück</button>
+        
+    </div>
+
+    </span>
+</template>
+
+<script type="text/javascript">
+var pagemanagercomponent = {
+    template: '#pagemanagercomponent',
+    props: {
+        linkItem: Object
+    },
+    components: {
+        paginationcomponent
+    },
+    data: function(){
+        return {
+            topError: false,
+            topErrorMessage: 'Die Daten konnten nicht geladen werden.',
+            form: {
+                errorMessages: null,
+                searchstring: null,
+                getLink: '/pagemanager/get-items'
+            },
+            items: null,
+            pagination: {
+                activePage: 0,
+                pageSize: 20
+            }
+        }
+    },
+    mounted: function() {
+        this.getItems()
+    },
+    methods: {
+        getItems() {
+            self = this;
+            //load items
+            $.post(self.form.getLink,
+            {
+                "PageFilterForm[searchstring]": this.form.searchstring,
+                "PageFilterForm[pageno]": this.pagination.activePage,
+                "PageFilterForm[pageSize]": this.pagination.pageSize
+            })
+            .done(function(data) {
+                if(data.items){
+                    self.topError           = false
+                    self.form.errorMessages = null
+
+                    self.items      = data.items
+                    self.pagination = data.pagination
+                }
+                else {
+                    self.topError           = true
+                    self.form.errorMessages = data.errormessages
+                }
+            })
+            .fail(function() {
+                self.topError = true
+                self.form.errorMessages = null
+                console.log( "error loading items" )
+            });
+        },
+        selectItem(item){
+            //console.log("Selected: " + item.id)
+            this.linkItem.targetPage            = {}
+            this.linkItem.target_page_id        = item.id
+            this.linkItem.targetPage.linkname   = item.linkname
+            this.linkItem.targetPage.urlname    = item.urlname
+            //pagemanager schließen
+            this.$parent.closePagemanager()
+        }
+    }
+}
+
+</script>
+<template id="imagemanagercomponent">
+    <span>
+
+    <!-- Imagemanager -->
+    <h3>Ausgewählte Images</h3>
+    <div class="list column image-item">
+        <div class="noImage-text" v-if="itemsSelected.length == 0">Kein Image ausgewählt</div>
+        
+        <div class="card image mb-3" v-for="item in itemsSelected" v-bind:key="item.id">
+            <div class="card-img-top-wrapper">
+                <img class="card-img-top" v-bind:src="'/content/images/up/' + item.filename">
+            </div>
+            <div class="card-body">
+                <p class="card-text text-muted">
+                    {{item.name}}
+                </p>
+                <a href="#" v-on:click.prevent="removeItem(item)" class="btn btn-danger material-icons" data-id="">remove</a>
+                <a href="#" v-on:click.prevent="removeItem(item)" class="btn btn-outline-primary material-icons">edit</a>
+            </div>
+        </div>
+        <br/>
+    </div>
+    <button v-on:click="acceptItems()" class="btn btn-outline-primary">Auswahl übernehmen</button>
+    
+    <hr/>
+    <h3>Verfügbare Images</h3>
+    <div class="image-item">
+        <form v-on:submit.prevent="onSubmit" method="POST">
+            <div class="row">
+                <label class="control-label col-sm-3" for="searchstring">Suche</label>
+                <div class="col-sm-9">
+                    <input type="text" v-validate="{regex: /^([0-9A-Za-z,.\-;:_#+*\\ß?=)(\/&%$§! ]+)$/}" id="searchstring" class="form-control" name="Searchstring" v-model="form.searchstring" v-on:change="getItems" aria-required="true">
+                    <p class="help-block help-block-error ">{{(form.errorMessages)?form.errorMessages.searchstring[0]:''}}</p>
+                </div>
+            </div>
+        </form>
+        
+        <nav v-if="pagination">
+            <div class="pagination pagination-sm justify-content-end" v-if="pagination && items!= null">
+                {{pagination.totalCount}} Ergebnisse
+            </div>  
+        </nav>
+        <p class="alert alert-danger" v-if="topError">{{topErrorMessage}}</p>
+        <p class="alert alert-danger" v-if="maxSelectingError">{{maxSelectingErrorMessage}}</p>
+        <div class="list column image-item">
+            <div class="card image mb-3" v-for="item in items" v-bind:key="item.id" v-if="!itemsSelected.includes(item)">
+                <div class="card-img-top-wrapper">
+                    <img class="card-img-top" v-bind:src="'/content/images/up/' + item.filename">
+                </div>
+                <div class="card-body">
+                    <p class="card-text text-muted">
+                        {{item.name}}
+                    </p>
+                    <a href="#" v-on:click.prevent="selectItem(item)" class="btn btn-primary material-icons" data-id="">add</a>
+                    <a href="#" v-on:click.prevent="selectItem(item)" class="btn btn-outline-primary material-icons">edit</a>
+                </div>
+            </div>
+            <vue-dropzone ref="myVueDropzone" id="dropzone" :options="dropzoneOptions"></vue-dropzone>
+
+            <paginationcomponent v-bind:pagination="pagination" v-if="pagination && items != null && items.length > 0"></paginationcomponent>
+        </div>        
+        <br/>
+        <button v-on:click="$parent.closePagemanager()" class="btn btn-outline-primary">Abbrechen</button>
+        
+    </div>
+
+    </span>
+</template>
+
+<script type="text/javascript">
+var imagemanagercomponent = {
+    template: '#imagemanagercomponent',
+    props: {
+        imageList: Object,
+        maxSelecting: null
+    },
+    components: {
+        paginationcomponent,
+        vueDropzone: vue2Dropzone
+    },
+    data: function(){
+        return {
+            topError: false,
+            topErrorMessage: 'Die Daten konnten nicht geladen werden.',
+            maxSelectingError: false,
+            maxSelectingErrorMessage: 'Sie können maximal ' + this.maxSelecting +' Image' + ((this.maxSelecting>1)?'s':'') +' auswählen',
+            form: {
+                errorMessages: null,
+                searchstring: null,
+                getLink: '/imagemanager/get-items'
+            },
+            itemsSelected: [
+            ],
+            items: [],
+            pagination: {
+                activePage: 0,
+                pageSize: 20
+            },
+            dropzoneOptions: {
+                url: '/imagemanager/upload',
+                paramName: 'UploadImageForm[imageFiles]',
+                thumbnailWidth: 150,
+                maxFilesize: 0.5,
+                uploadMultiple: true,
+                resizeHeight: 480,
+                maxFiles: 10,
+                acceptedFiles: 'image/jpeg,image/gif,image/png',
+                complete: this.afterUpload
+            }
+        }
+    },
+    mounted: function() {
+        this.itemsSelected = JSON.parse(  JSON.stringify(this.imageList.uploadedimages))
+        this.getItems()
+    },
+    methods: {
+        getItems() {
+            self = this;
+            //load items
+            //exclude already inserted items
+            var excludeItems = []
+            this.itemsSelected.forEach(function(elem){
+                //console.log(elem.id)
+                excludeItems.push(elem.id) 
+            })
+            $.post(self.form.getLink,
+            {
+                "SearchFilterForm[searchstring]": this.form.searchstring,
+                "SearchFilterForm[pageno]": this.pagination.activePage,
+                "SearchFilterForm[pageSize]": this.pagination.pageSize,
+                "SearchFilterForm[exclude][]": excludeItems
+            })
+            .done(function(data) {
+                if(data.items){
+                    self.topError           = false
+                    self.form.errorMessages = null
+
+                    self.items      = data.items
+                    self.pagination = data.pagination
+                }
+                else {
+                    self.topError           = true
+                    self.form.errorMessages = data.errormessages
+                }
+            })
+            .fail(function() {
+                self.topError = true
+                self.form.errorMessages = null
+                console.log( "error loading items" )
+            });
+        },
+        selectItem(item){
+            if(this.maxSelecting == null || this.itemsSelected.length < this.maxSelecting){
+                //console.log("Selected: " + item.id
+                this.itemsSelected.push(item)
+                this.getItems()
+            }
+            else {
+                this.maxSelectingError = true;
+            }
+        },
+        removeItem(item){
+            this.maxSelectingError = false;
+            //remove from itemsSelected by putting all others in new array
+            //have not found a correct remove function of javascript (splice has not worked)
+            var newSelected = []
+            this.itemsSelected.forEach(function(elem){
+                if(elem.id != item.id)
+                    newSelected.push(elem)
+            })
+            this.itemsSelected = newSelected
+            
+            this.getItems()
+        },
+        //hochladen
+        afterUpload(file, response){
+            this.$refs.myVueDropzone.removeAllFiles()
+            this.getItems()
+        },
+        acceptItems(){
+            this.imageList.uploadedimages = this.itemsSelected
+            this.$parent.closePagemanager();
+        }
+    }
+}
+
+</script>
+
+    <div id="editItem">
+        <form v-on:submit.prevent="onSubmit" method="POST" v-if="view == 'form'">
+            <h3>Teaser - Edit</h3>
+            <div v-if="form.isChanged" class="alert alert-warning" role="alert">
+                <strong>Achtung!</strong>
+                <br>
+                Diese Seite enthält noch ungespeicherte Elemente.
+            </div>            
+
+            <p class="alert alert-success" v-if="form.topSuccess">{{form.topSuccessMessage}}</p>
+            <p class="alert alert-danger" v-if="form.topError">{{form.topErrorMessage}}</p>
+            <p class="alert alert-danger" v-if="form.topErrorLoading">{{form.topErrorLoadingMessage}}</p>
+
+            <div class="row field-teaser-headline required">
+                <label class="control-label col-sm-3" for="teaser-headline">Headline</label>
+                <div class="col-sm-9">
+                    <input v-validate="'required'" type="text" id="teaser-headline" class="form-control" name="Headline" v-model="item.headline" aria-required="true">
+                    <p class="help-block help-block-error " v-if="errors.has('Headline')">{{errors.first('Headline')}}</p>
+                    <p class="help-block help-block-error " >{{(form.errorMessages && form.errorMessages.item)?form.errorMessages.item.headline[0]:''}}</p>
+                </div>
+            </div> 
+            <div class="row field-teaser-text required">
+                <label class="control-label col-sm-3" for="teaser-headline">Text</label>
+                <div class="col-sm-9">
+                    <textarea v-validate="{required:true, regex: /^([0-9A-Za-z,.\-;:_#+*\\ß?=)(\/&%$§! ]+)$/}" id="teaser-text" v-model="item.text" class="form-control" name="Text" aria-required="true">
+                    </textarea>
+                    <p class="help-block help-block-error " v-if="errors.has('Text')">{{errors.first('Text')}}</p>
+                    <p class="help-block help-block-error " >{{(form.errorMessages && form.errorMessages.item)?form.errorMessages.item.text[0]:''}}</p>
+                </div>
+            </div>
+
+            <hr/>
+            <linkcomponent 
+                v-if="item.linkItem != null" 
+                v-bind:link-item="item.linkItem"
+                v-on:select-link-from-pagemanager="selectLinkFromPagemanager"
+                v-on:changed="form.isChanged = true">
+            </linkcomponent>
+
+            <hr/>
+            <imagecomponent 
+                v-if="item.imageList != null" 
+                v-bind:image-list="item.imageList"
+                v-on:changed="form.isChanged = true">
+            </imagecomponent>
+            <hr/>
+            <releasecomponent 
+                v-bind:release-item="item.release"
+                v-on:changed="form.isChanged = true">
+            </releasecomponent>
+            
+            <button type="submit" class="btn" v-bind:class="{ 'btn-danger': form.isChanged, 'btn-primary': !form.isChanged}">Speichern</button>
+            <a class="btn btn-outline-primary" href="/page/edit">Zurück</a>
+            <br/><br/>
+        </form>
+        
+        <div v-if="view == 'pagemanager'">
+            <pagemanagercomponent
+                v-bind:link-item="item.linkItem"
+                v-on:show-form="view='form'">
+            </pagemanagercomponent>
+        </div>
+        <div v-if="view == 'imagemanager'">
+            <imagemanagercomponent
+                v-bind:image-list="item.imageList"
+                max-selecting=1>
+            </imagemanagercomponent>
+        </div>
+            
+    </div>
+
+    <script type="text/javascript">
+    Vue.component('flat-pickr', VueFlatpickr);
+    Vue.component('VeeValidate', VeeValidate);
+    Vue.use(VeeValidate);
+    
+    new Vue({
+        el: '#editItem',
+        components: {
+            linkcomponent,
+            imagecomponent,
+            releasecomponent,
+            pagemanagercomponent,
+            imagemanagercomponent
+        },
+        data: {
+            view: 'form',
+            form: {
+                isChanged: false,
+                topError: false,
+                topErrorLoading: false,
+                topSuccess: false,
+                topSuccessMessage: 'Gespeichert',
+                topErrorMessage: 'Bitte überprüfen Sie Ihre Eingaben',
+                topErrorLoadingMessage: 'Daten konnten nicht geladen werden.',
+                errorMessages: {},
+                getLink: '/teaserlist/get-item/2',
+                saveLink: '/teaserlist/save-item/2'
+            },
+            item: {
+                linkItem: null
+            }
+        },
+        mounted: function() {
+            this.onLoad()
+        },
+        // define methods under the `methods` object
+        methods: {
+            onLoad() {
+                //vee-validate auf language de einstellen
+                this.$validator.localize('de');
+                //console.log('load')
+                //item laden
+                self = this;
+                $.post(self.form.getLink,
+                {
+                })
+                .done(function(data) {
+                    self.item = data
+                    self.form.topErrorLoading = false
+                })
+                .fail(function() {
+                    self.form.topErrorLoading = true
+                    console.log( "error loading item" )
+                });
+            },
+            onSubmit: function (event) {
+                this.$validator.validateAll().then((result) => {
+                if (result) {
+                    //console.log('submit')
+                    self = this;
+
+                    //change uploadedimages to array of ids
+                    var imageListIds = []
+                    if(this.item.imageList.uploadedimages){
+                        this.item.imageList.uploadedimages.forEach( function(image){
+                            imageListIds.push(image.id)
+                        })
+                    }
+                        
+                    $.post(self.form.saveLink,
+                    {
+                        "Teaser[headline]": this.item.headline,
+                        "Teaser[text]": this.item.text,
+                        "Release[is_released]": this.item.release.is_released,
+                        "Release[from_date]": this.item.release.from_date,
+                        "Release[to_date]": this.item.release.to_date,
+                        "LinkItem[extern_url]": this.item.linkItem.extern_url,
+                        "LinkItem[target_page_id]": this.item.linkItem.target_page_id,
+                        "ImageList[uploadedimages_ids]": imageListIds
+                    })
+                    .done(function(data) {
+                        if(!data.saved){
+                            self.form.topSuccess = false
+                            self.form.topError = true
+                            self.form.errorMessages = data.errormessages
+                        }
+                        else {
+                            self.form.topSuccess = true
+                            self.form.topError = false
+                            self.form.errorMessages = null
+                            self.form.showLinkExternInput = false
+                        }
+                        //UnSaved markierung entfernen
+                        self.form.isChanged = false;                        
+                    })
+                    .fail(function() {
+                      console.log( "error saving item" )
+                    });
+                }});
+            },
+            /* LinkItem-Funktionen */
+            selectLinkFromPagemanager: function (event) {
+                this.view = 'pagemanager'
+            },
+            closePagemanager(){
+                this.view = 'form'
+            },
+            selectImageFromImagemanager() {
+                this.view = 'imagemanager'
+            },
+            closeImagemanager(){
+                this.view = 'form'
+            }
+        }
+    });
+        
+    </script>
+    
+                    </div> <!-- content end -->
+                    <div class="content" id="content2">
+                    </div>
+                </div> <!-- Column 1 end -->
+
+                <div id="column-2">
+                    
+                
+                    <span class="related-buttons">
+                    
+                        <a href="/" class="btn btn-secondary">Edit-Modus beenden</a>
+                    
+                                                <a href="/teaserlist/create-item/999" class="btn btn-secondary">Eintrag zur Liste hinzufügen</a>
+                                  
+                    </span>
+
+                              
+                    <div id="column-21"> 
+                        <div class="content">
+                            <h4>News</h4>
+                            <dl>
+                                <dt>22. 8. 2008</dt>
+                                <dd><a href="#">Justo Lorem vitae porttitor Nullam Pellentesque quis&hellip;</a></dd>
+
+                                <dt>22. 8. 2008</dt>
+                                <dd><a href="#">Justo Lorem vitae porttitor Nullam Pellentesque quis&hellip;</a></dd>
+
+                                <dt>22. 8. 2008</dt>
+                                <dd><a href="#">Justo Lorem vitae porttitor Nullam Pellentesque quis&hellip;</a></dd>
+                            </dl>
+                        </div>
+                    </div> <!-- Column 21 end -->
+
+                    <div id="column-22">
+                        <div class="content">
+                            <h4>Advertisment</h4>
+                            <h4 class="nobg">Categories</h4> 
+                            <ul class="r-list">
+                                <li><a href="#">Elit vel</a></li>
+                                <li><a class="active" href="#">Justo lorem</a></li>
+                                <li><a href="#">Vestibulum sed</a></li>
+                                <li><a href="#">Proin ipsum</a></li>
+                                <li><a href="#">Laoreet phasellus</a></li>
+                            </ul>
+
+                            <h4 class="nobg">Subjects</h4> 
+                            <ul class="r-list">
+                                <li><a href="#">Elit vel</a></li>
+                                <li><a href="#">Justo lorem</a></li>
+                                <li><a href="#">Vestibulum sed</a></li>
+                                <li><a href="#">Proin ipsum</a></li>
+                                <li><a href="#">Laoreet phasellus</a></li>
+                            </ul>
+                        </div>
+                    </div> <!-- Column 22 end -->
+
+
+
+
+                </div> <!-- Column 2 end -->
+                <div class="cleaner">&nbsp;</div>
+            </div>  <!-- Content of the site end -->
+
+
+            <div id="footer">
+                <div id="footer-in">
+                    <ul>
+                        <li><a href="#" class=" first active">Home</a> |</li>
+                        <li><a href="#">About us</a> |</li>
+                        <li><a href="#">Testimonials</a> |</li>
+                        <li><a href="#">We support</a> |</li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+
+                    <p class="print"><a id="print" href="#">Print</a> | <a href="#top">Top</a> &uarr;</p>
+                    <div class="cleaner">&nbsp;</div>
+                    <p id="backs"><a href="http://www.mantisatemplates.com/">Mantis-a templates</a> | tip <a href="http://www.topas-tachlovice.cz/topas-tachlovice.aspx" title="Občanské sdružení TOPAS Tachlovice">Tachlovice</a></p>
+                </div>
+            </div> <!-- Footer end -->
+
+        </div> <!-- Wrapper end -->
+        </div> <!-- top -->
+    </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="/assets/399d2dc6/yii.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="/js/menu.js"></script></body>
+</html>

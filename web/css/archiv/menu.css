@@ -1,0 +1,385 @@
+@charset "UTF-8";
+/* Menu */
+#menu-box {
+  background-color: #EEEEEE;
+  border-bottom: 1px solid #B0BCC3;
+}
+
+#menu {
+  width: 960px;
+  margin: 0 auto;
+  list-style: none;
+  text-align: left;
+  font: 1.2em Georgia, "Times New Roman", Times, serif;
+  letter-spacing: 1px;
+  position: relative;
+  display: flex;
+}
+
+#menu li {
+  display: inline;
+  text-align: center;
+  line-height: 34px;
+}
+
+#menu li a {
+  float: left;
+  display: block;
+  color: #474747;
+  font-weight: normal;
+  padding: 0 18px;
+  border-right: 1px solid #B0BCC3;
+  text-decoration: none;
+}
+
+#menu li a.first {
+  border-left: 1px solid #B0BCC3;
+}
+
+#menu li a:hover {
+  color: #006BA3;
+}
+
+#menu li a.active {
+  background-color: #ADDEFF;
+  color: #202020;
+}
+
+#menu li a {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+#menu li a.hamburger {
+  background-image: url("../img/layout/hamburger-menu2.gif");
+  background-repeat: no-repeat;
+  background-size: 26px;
+  background-position-y: 4px;
+  background-position-x: 2px;
+  padding-left: 35px;
+}
+
+#menu .submenu-parent {
+  position: relative;
+}
+
+#menu .submenu-parent:hover .submenu, #menu .submenu-parent.menuClicked .submenu {
+  width: auto;
+  visibility: visible;
+  /* shows sub-menu */
+  opacity: 1;
+  z-index: 999;
+  transform: translateY(0%);
+  transition-delay: 0s, 0s, 0.3s;
+  /* this removes the transition delay so the menu will be visible while the other styles transition */
+}
+
+#menu .submenu {
+  border: 1px solid #b0bcc3;
+  background: #eee;
+  visibility: hidden;
+  /* hides sub-menu */
+  opacity: 1;
+  position: absolute;
+  top: 2.35em;
+  left: -1px;
+  /* transform: translateY(-4em); */
+  z-index: 999;
+}
+
+#menu .submenu li {
+  border-bottom: 1px solid #b0bcc3;
+  text-align: left;
+  width: 100%;
+}
+
+#menu .submenu li a {
+  border-right: 0px;
+  width: 100%;
+  display: inline-block;
+}
+
+#menu .submenu li {
+  display: inline-block;
+  text-align: left;
+}
+
+#menu .submenu li a {
+  float: none;
+  white-space: nowrap;
+}
+
+#menu li.divider {
+  width: 100%;
+}
+
+#menu li.right-aligned {
+  border-right: 0px;
+  border-left: 1px solid #B0BCC3;
+}
+
+#menu li.user-menu {
+  position: relative;
+}
+
+#menu li.user-menu .flyerBox {
+  position: absolute;
+  right: 0px;
+  top: 2.35em;
+  visibility: hidden;
+  /* hides sub-menu */
+}
+
+#menu li.user-menu .flexBox {
+  display: none;
+}
+
+#menu li.user-menu.menuClicked .flexBox, #menu li.user-menu:hover .flexBox {
+  display: flex;
+  position: absolute;
+  top: 2.35em;
+  right: 0px;
+}
+
+#menu li.user-menu a {
+  background: #dd0000;
+  color: #ffffff;
+}
+
+#menu li.user-menu a:hover {
+  background: #dd0000;
+  color: #dddddd;
+}
+
+#menu li.user-menu .submenu, #menu li.user-menu .submenu a {
+  background: #ff0000;
+}
+
+#menu li.user-menu ul.submenu {
+  position: relative;
+  top: 0px;
+  right: 0px;
+  left: auto;
+}
+
+#menu li.user-menu ul.submenu li.headline {
+  text-decoration: underline;
+  font-style: italic;
+  color: #ffffff;
+  background: #dd0000;
+  padding: 0 18px;
+  border-bottom: 0px;
+  width: 100%;
+  white-space: nowrap;
+}
+
+/* breit */
+#menuResponsive {
+  /*Responsive: ausgeblendet*/
+  display: none;
+}
+
+/*Responsive*/
+@media only screen and (max-width: 979px) {
+  #menu {
+    /*Desktop: ausgeblendet*/
+    display: none;
+  }
+
+  #menuResponsive {
+    /*dafür Responsive: eingeblendet*/
+    display: flex;
+  }
+
+  /*Orginal:*/
+  #menuResponsive {
+    width: 100%;
+    margin: 0 auto;
+    list-style: none;
+    text-align: left;
+    font: 1.2em Georgia, "Times New Roman", Times, serif;
+    letter-spacing: 1px;
+  }
+
+  #menuResponsive li {
+    display: inline;
+    text-align: center;
+    line-height: 34px;
+  }
+
+  #menuResponsive li a {
+    float: left;
+    display: block;
+    color: #474747;
+    font-weight: normal;
+    padding: 0 18px;
+    border-right: 1px solid #B0BCC3;
+    text-decoration: none;
+  }
+
+  #menuResponsive li a.first {
+    border-left: 1px solid #B0BCC3;
+  }
+
+  #menuResponsive li a:hover {
+    color: #006BA3;
+  }
+
+  #menuResponsive li a.active {
+    background-color: #ADDEFF;
+    color: #202020;
+  }
+
+  /*Ergänzung:*/
+  #menuResponsive {
+    position: relative;
+    display: flex;
+  }
+
+  #menuResponsive .hide {
+    display: none;
+  }
+
+  #menuResponsive li a {
+    display: inline-block;
+    white-space: nowrap;
+  }
+
+  #menuResponsive li a.hamburger {
+    background-image: url("../img/layout/hamburger-menu2.gif");
+    background-repeat: no-repeat;
+    background-size: 26px;
+    background-position-y: 4px;
+    background-position-x: 2px;
+    padding-left: 35px;
+  }
+
+  #menuResponsive .submenu-parent {
+    position: relative;
+  }
+
+  #menuResponsive .submenu-parent .material-icons, #menuResponsive .submenu .material-icons {
+    position: relative;
+    top: 5px;
+  }
+
+  #menuResponsive .submenu-parent:hover .submenu, .menuResponsive .submenu-parent.menuClicked .submenu {
+    width: auto;
+    visibility: visible;
+    /* shows sub-menu */
+    opacity: 1;
+    z-index: 999;
+    transform: translateY(0%);
+    transition-delay: 0s, 0s, 0.3s;
+    /* this removes the transition delay so the menu will be visible while the other styles transition */
+  }
+
+  #menuResponsive .submenu {
+    border: 1px solid #b0bcc3;
+    background: #eee;
+    visibility: hidden;
+    /* hides sub-menu */
+    opacity: 1;
+    position: absolute;
+    top: 2.35em;
+    left: -1px;
+    /* transform: translateY(-4em); */
+    z-index: 999;
+  }
+
+  #menuResponsive .submenu li {
+    border-bottom: 1px solid #b0bcc3;
+    text-align: left;
+    width: 320px;
+  }
+
+  #menuResponsive .submenu li a {
+    border-right: 0px;
+    width: 100%;
+    display: inline-block;
+  }
+
+  #menuResponsive .submenu li {
+    display: inline-block;
+    text-align: left;
+  }
+
+  #menuResponsive .submenu li a {
+    float: none;
+    white-space: nowrap;
+  }
+
+  #menuResponsive li.divider {
+    width: 100%;
+  }
+
+  #menuResponsive li.right-aligned {
+    border-right: 0px;
+    border-left: 1px solid #B0BCC3;
+  }
+
+  #menuResponsive li.user-menu {
+    position: relative;
+  }
+
+  #menuResponsive li.user-menu .flyerBox {
+    position: absolute;
+    right: 0px;
+    top: 2.35em;
+    visibility: hidden;
+    /* hides sub-menu */
+  }
+
+  #menuResponsive .submenu.menuClicked, #menuResponsive li.user-menu .flyerBox.menuClicked,
+#menuResponsive li.user-menu .flyerBox.menuClicked .submenu {
+    width: 320px;
+    visibility: visible;
+    /* shows sub-menu */
+    opacity: 1;
+    z-index: 999;
+    transform: translateY(0%);
+    transition-delay: 0s, 0s, 0.3s;
+    /* this removes the transition delay so the menu will be visible while the other styles transition */
+  }
+
+  #menuResponsive li.user-menu .flexBox {
+    /* display: flex; */
+  }
+
+  #menuResponsive li.user-menu a.hamburger {
+    background-image: url("../img/layout/hamburger-menu3.gif");
+  }
+
+  #menuResponsive li.user-menu a {
+    background-color: #dd0000;
+    color: #ffffff;
+  }
+
+  #menuResponsive li.user-menu a:hover {
+    background-color: #dd0000;
+    color: #dddddd;
+  }
+
+  #menuResponsive li.user-menu .submenu, #menuResponsive li.user-menu .submenu a {
+    background-color: #ff0000;
+  }
+
+  #menuResponsive li.user-menu ul.submenu {
+    right: 0px;
+    left: auto;
+    position: inherit;
+  }
+
+  #menuResponsive li.user-menu ul.submenu li.headline {
+    text-decoration: underline;
+    font-style: italic;
+    color: #ffffff;
+    background: #dd0000;
+    padding: 0 18px;
+    border-bottom: 0px;
+    /* width: 100%; */
+    white-space: nowrap;
+  }
+}
+
+/*# sourceMappingURL=menu.css.map */
