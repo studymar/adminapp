@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="de-DE">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title></title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="/css/layout.css" rel="stylesheet">
+<link href="/css/menu.css" rel="stylesheet"></head>
+<body>
+
+    <div>
+        <div id="bar"></div>
+        <div id="top">
+        <div id="wrapper">
+
+            <!-- Header -->
+            <div id="header">
+            <h1><a href="/">TTKV Harburg-Land e.V.</a></h1>
+            <p class="title">Tischtennis in der südlichen Metropolregion von Hamburg</p>
+            </div> <!-- Header end -->
+
+            <!-- Menu -->
+            <div id="menu-box" class="cleaning-box">
+              
+    <!-- Hauptmenu breit Start -->
+    <ul id="menu">
+        
+        <!--
+        <li><nuxt-link  to="/" class="first">Home</nuxt-link></li>
+        <li><a href="#">Click-tt</a></li>
+        <li><a href="#">Pokal</a></li>
+        <li class="submenu-parent"><a href="#" v-on:click.prevent="menuClicked" class="active">KM / RL</a>
+            <ul class="submenu">
+                <li><a href="#">Kreismeisterschaften</a></li>
+                <li><a href="#">Ranglisten</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Anschriften</a></li>
+        <li class="submenu-parent"><a href="#" v-on:click.prevent="menuClicked">Termine</a>
+            <ul class="submenu">
+                <li><a href="#">Termine Damen/Herren</a></li>
+                <li><a href="#">Termine Jugend</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Downloads</a></li>
+        <li><a href="#">Links</a></li>
+        -->
+
+        <li class="divider"></li>
+                <li class="right-aligned"><a href="/account/index">Login</a></li>
+            </ul>
+    <!-- Hauptmenu Breit End -->
+    
+    
+    <!-- Hauptmenu Responsive Start -->
+    <ul id="menuResponsive">
+        <li class="submenu-parent"><a href="#" data-target="MainMenu" class="menuOpenByClickResponsive first hamburger submenu-parent">Menü</a>
+            <ul class="submenu hide" id="MainMenu">
+                <!--
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Click-tt</a></li>
+                <li><a href="#">Pokal</a></li>
+                <li class="submenu-parent"><a href="#" v-on:click.prevent="menuClickedResponsive('KMMenu',$event)" class="active">KM / RL >></a>
+                </li>
+                <li><a href="#">Anschriften</a></li>
+                <li class="submenu-parent"><a href="#" v-on:click.prevent="menuClickedResponsive('TerminMenu',$event)">Termine >></a>
+                </li>
+                <li><a href="#">Downloads</a></li>
+                <li><a href="#">Links</a></li>
+                -->
+                            </ul>
+        </li>
+
+
+        <li class="divider"></li>
+        <!--
+        <li class="right-aligned user-menu"><a href="#" data-target="MainMenu" class="menuOpenByClickResponsive hamburger submenu-parent">Mein Menü</a></li>
+            <div class="flexBox">
+            <ul class="submenu">
+                <li class="headline">Mein Account</li>
+                <li><nuxt-link to="/meinedaten">Meine Daten</nuxt-link ></li>
+                <li><a href="/account/logout">Logout</a></li>
+                <li class="headline">Mein Verein (TVV Neu Wulmstorf)</li>
+                <li><a href="#">Vereinskontaktdaten pflegen</a></li>
+                <li><a href="#">Vereinsmeldung abgeben</a></li>
+            </ul>
+            <ul class="submenu">
+                <li class="headline">Verwaltung</li>
+                <li><nuxt-link  to="/navigation">Hauptmenü verwalten</nuxt-link></li>
+                <li><nuxt-link  to="/usermanager">Userverwaltung</nuxt-link></li>
+                <li><nuxt-link to="/usermanager/roles">Rollenverwaltung</nuxt-link></li>
+
+                <li class="headline">Alle Vereine</li>
+                <li><a href="#">Vereine verwalten</a></li>
+                <li><a href="#">Vereinspositionen verwalten</a></li>
+                <li><a href="#">Vereinsmeldung verwalten</a></li>
+            </ul>
+            <ul class="submenu">            
+                <li class="headline">Spielbetrieb</li>
+                <li><a href="#">Spielzeiten/Saisons</a></li>
+                <li><a href="#">Spielklassen</a></li>
+            </ul>
+            </div>
+        </li>
+        -->
+                <li class="right-aligned"><a href="/account/index">Login</a></li>
+                <li>
+                        <!--
+            <ul class="submenu hide" id="submenuLayer">
+                <li><a href="#" v-on:click.prevent="menuClickedResponsive('MainMenu',$event)"> Zurück <i class="material-icons">arrow_drop_up</i></a></li>
+                <li v-for="subitem in subnavigation" :key="subitem.id" >
+                    <nuxt-link v-bind:to="(subitem.path)?subitem.path:'/'" @click.native.prevent="closeSubmenu($event)" v-bind:class="{active: subitem.active}" v-if="subitem.external == '0'">{{subitem.name}}</nuxt-link>
+                    <a v-bind:href="(subitem.path)?subitem.path:'/'" v-on:click.prevent="closeSubmenu($event)" v-bind:class="{active: subitem.active}" target="_blank" v-else>{{subitem.name}}</a>
+                </li>
+            </ul>
+            -->
+            <!--
+            <ul class="submenu hide" id="KMMenu">
+                <li><a href="#" v-on:click.prevent="menuClickedResponsive('MainMenu',$event)"> Zurück <i class="material-icons">arrow_drop_up</i></a></li>
+                <li><a href="#">Kreismeisterschaften</a></li>
+                <li><a href="#">Ranglisten</a></li>
+            </ul>
+            <ul class="submenu hide" id="TerminMenu">
+                <li><a href="#" v-on:click.prevent="menuClickedResponsive('MainMenu',$event)"> Zurück <i class="material-icons">arrow_drop_up</i></a></li>
+                <li><a href="#">Termine Damen/Herren</a></li>
+                <li><a href="#">Termine Jugend</a></li>
+            </ul>
+            -->
+        </li>
+    </ul>    
+    <!-- Hauptmenu Responsive End -->
+    
+    
+                </div> <!-- Menu end -->
+
+            <hr class="noscreen" />
+            <div id="skip-menu"></div>
+
+            <div id="content"> 
+
+                <div id="column-1">
+                    <div class="content">
+                        
+                                        
+
+
+
+                        <div>
+                            <!--<h2>News</h2>-->
+
+                                                            
+
+                        </div>
+
+                    </div> <!-- content end -->
+                </div> <!-- Column 1 end -->
+
+                <div id="column-2">
+                    
+                              
+                    <div id="column-21"> 
+                        <div class="content">
+                            <h4>News</h4>
+                            <dl>
+                                <dt>22. 8. 2008</dt>
+                                <dd><a href="#">Justo Lorem vitae porttitor Nullam Pellentesque quis&hellip;</a></dd>
+
+                                <dt>22. 8. 2008</dt>
+                                <dd><a href="#">Justo Lorem vitae porttitor Nullam Pellentesque quis&hellip;</a></dd>
+
+                                <dt>22. 8. 2008</dt>
+                                <dd><a href="#">Justo Lorem vitae porttitor Nullam Pellentesque quis&hellip;</a></dd>
+                            </dl>
+                        </div>
+                    </div> <!-- Column 21 end -->
+
+                    <div id="column-22">
+                        <div class="content">
+                            <h4>Advertisment</h4>
+                            <h4 class="nobg">Categories</h4> 
+                            <ul class="r-list">
+                                <li><a href="#">Elit vel</a></li>
+                                <li><a class="active" href="#">Justo lorem</a></li>
+                                <li><a href="#">Vestibulum sed</a></li>
+                                <li><a href="#">Proin ipsum</a></li>
+                                <li><a href="#">Laoreet phasellus</a></li>
+                            </ul>
+
+                            <h4 class="nobg">Subjects</h4> 
+                            <ul class="r-list">
+                                <li><a href="#">Elit vel</a></li>
+                                <li><a href="#">Justo lorem</a></li>
+                                <li><a href="#">Vestibulum sed</a></li>
+                                <li><a href="#">Proin ipsum</a></li>
+                                <li><a href="#">Laoreet phasellus</a></li>
+                            </ul>
+                        </div>
+                    </div> <!-- Column 22 end -->
+
+
+
+
+                </div> <!-- Column 2 end -->
+                <div class="cleaner">&nbsp;</div>
+            </div>  <!-- Content of the site end -->
+
+
+            <div id="footer">
+                <div id="footer-in">
+                    <ul>
+                        <li><a href="#" class=" first active">Home</a> |</li>
+                        <li><a href="#">About us</a> |</li>
+                        <li><a href="#">Testimonials</a> |</li>
+                        <li><a href="#">We support</a> |</li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+
+                    <p class="print"><a id="print" href="#">Print</a> | <a href="#top">Top</a> &uarr;</p>
+                    <div class="cleaner">&nbsp;</div>
+                    <p id="backs"><a href="http://www.mantisatemplates.com/">Mantis-a templates</a> | tip <a href="http://www.topas-tachlovice.cz/topas-tachlovice.aspx" title="Občanské sdružení TOPAS Tachlovice">Tachlovice</a></p>
+                </div>
+            </div> <!-- Footer end -->
+
+        </div> <!-- Wrapper end -->
+        </div> <!-- top -->
+    </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="/assets/a6d3e099/yii.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="/js/menu.js"></script></body>
+</html>
