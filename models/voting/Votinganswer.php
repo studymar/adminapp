@@ -347,7 +347,7 @@ class Votinganswer extends \yii\db\ActiveRecord
             //..die Anzahl Stimmen herausfinden
             if($withStimmen){
                 $results = Votinganswer::getResultStatisticWithStimmen($votingquestion,$opt->id);
-                if($results ){
+                if( count($results)>0 && $sumValues>0 ){
                     $results["percent"]     = round($results["anz"]/$sumValues * 100,2);//prozent berechnen
                     $results["value"]    = $opt->value;
                     //zum resultset hinzufügen
