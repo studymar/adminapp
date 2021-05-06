@@ -22,7 +22,8 @@ class VueAsset extends AssetBundle
     public $css = [
     ];
     public $js = [
-        ['https://cdn.jsdelivr.net/npm/vue/dist/vue.js','position' => \yii\web\View::POS_HEAD] //dev-mode
+        ['https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js','position' => \yii\web\View::POS_HEAD] //prod-mode
+        //['https://cdn.jsdelivr.net/npm/vue/dist/vue.js','position' => \yii\web\View::POS_HEAD] //dev-mode
         //['https://cdn.jsdelivr.net/npm/vue/dist/vue.js','position' => \yii\web\View::POS_END] //dev-mode
         //['https://cdn.jsdelivr.net/npm/vue','position' => \yii\web\View::POS_HEAD],
         //['https://unpkg.com/axios/dist/axios.min.js','position' => \yii\web\View::POS_HEAD]
