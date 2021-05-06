@@ -76,7 +76,7 @@ $config = [
                         'app\models\filters\MyAccessRule::matchesRolesAndRights'
                     ],
                     'exportInterval' => 1,
-                    'logFile' => '@runtime/logs/yiiharburg.log',
+                    'logFile' => '@runtime/logs/adminapp.log',
                     'logVars' => [],
                     //'logVars' => ['_SERVER'],
                 ],
