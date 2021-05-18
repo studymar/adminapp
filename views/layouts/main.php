@@ -10,6 +10,8 @@ use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use app\assets\LayoutAsset;
 use yii\helpers\Url;
+use app\models\user\User;
+use app\models\role\Right;
 
 LayoutAsset::register($this);
 ?>
@@ -118,6 +120,9 @@ LayoutAsset::register($this);
                              * 
                              */
                             ?>
+                            <?php
+                            if(!Yii::$app->user->isGuest && User::getLoggedInUser()->checkRight(Right::USERVERWALTUNG)):
+                            ?>
                             <li>
                                 <a href="">
                                     <i class="fa fa-user"></i> Userverwaltung <i class="fa arrow"></i>
@@ -131,7 +136,13 @@ LayoutAsset::register($this);
                                     </li>
                                 </ul>
                             </li>
+                            <?php
+                            endif;
+                            ?>
 
+                            <?php
+                            if(!Yii::$app->user->isGuest && User::getLoggedInUser()->checkRight(Right::VOTINGADMIN)):
+                            ?>
                             <li class="<?= (Yii::$app->controller->id == 'voting')?'open':''?>">
                                 <a href="">
                                     <i class="fa fa-user"></i> Voting/Umfragen <i class="fa arrow"></i>
@@ -142,6 +153,9 @@ LayoutAsset::register($this);
                                     </li>
                                 </ul>
                             </li>
+                            <?php
+                            endif;
+                            ?>
                             
                         </ul>
                         
