@@ -95,7 +95,7 @@ $config = [
                 '<controller:\w+>/<action>'=>'<controller>/<action>',
                 '<controller:\w+>/<p:\d+>'=>'<controller>/view',
                 //'<controller:\w+>'=>'<controller>/index',
-                '<p>'=>'page/index',
+                '<p>'=>'main/index',
             ],
         ],
         'i18n' => [
