@@ -25,10 +25,6 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      # Runs a single command using the runners shell (multi line with | und mehreren echos in den zeilen darunter)
-      - name: Start Deployment
-        run: Start Deployment!
-
       - name: FTP hash sync
         # You may pin to the exact commit or the version.
         # uses: socram8888/ftp-hash-sync@765613ad14a71d4750eacfca196cc5bf73077760
