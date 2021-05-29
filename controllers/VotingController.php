@@ -400,11 +400,17 @@ class VotingController extends Controller
         try {
             $model          = Votingquestion::find()->where(['id'=>$p])->one();
             if($model->updateFromRequest()){
-                if(count($model->votinganswers)<1)
+                if(count($model->votinganswers)<1){
                     Votingquestion::updateOptionsFromRequest($p);
-                $ret['saved'] = true;
+                    $ret['saved'] = true;
+                    $transaction->commit();
+                }
+                else {
+                    $ret['saved'] = false;
+                    $transaction->commit(); //rest trotzdem speichern, nur options nicht,
+                    //weil, bereits antworten drauf sind
+                }
                 
-                $transaction->commit();
             }
             $ret['errormessages'] = $model->getErrors();
             return $this->asJson($ret);

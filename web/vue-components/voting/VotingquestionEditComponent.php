@@ -26,7 +26,7 @@ include_once($env_vuecomponent_dir_vqc.'TextfieldComponent.php');
                 <h3 class="fs-5">Abstimmung editieren</h3>
             </div>
 
-            <p class="alert alert-danger" v-if="config.saveError">{{config.saveErrorMessage}}</p>
+            <p class="alert alert-danger" v-if="config.saveError">{{config.saveErrormessage}}</p>
 
             <validation-observer v-slot="{ handleSubmit }">
             <form v-on:submit.prevent="handleSubmit(onSubmit)" method="POST">
@@ -150,6 +150,8 @@ include_once($env_vuecomponent_dir_vqc.'TextfieldComponent.php');
                 </div>
 
                 <br/>
+                <p class="alert alert-danger" v-if="config.saveOptionsError">{{config.saveOptionsErrormessage}}</p>
+
                 <button type="submit" id="submit-button" class="btn btn-primary">Speichern</button>
                 <a href="" v-on:click.prevent="$parent.closeTopicQuestionEdit()" class="btn btn-outline-primary" id="cancel-button">Zurück</a>
                 
@@ -193,6 +195,8 @@ var votingQuestionEditComponent = {
                 saveLink: '<?= Url::toRoute(['voting/edit-question']).'/' ?>',
                 saveError: false,
                 saveErrormessage: 'Fehler: Abstimmung konnte nicht gespeichert werden',
+                saveOptionsError: false,
+                saveOptionsErrormessage: 'Auswahloptionen nicht mitgespeichert. Nur Änderbar, wenn noch keine Antworten vorhanden.',
                 getOptionsLink: '<?= Url::toRoute(['voting/get-votingoptions']).'/' ?>',
                 getOptionsError: false,
                 getOptionsErrormessage: 'Fehler: Optionen konnte nicht gespeichert werden',
@@ -259,20 +263,23 @@ var votingQuestionEditComponent = {
                 "Votingoptions": self.votingoptions
             })
             .done(function(data) {
-                if(!data.saved){
+                if(!data.saved || data.saved == false){
                     //error
-                    self.saveError = true
+                    self.config.saveError = false
+                    self.config.saveOptionsError = true // Nur Options wurden nicht gespeichert, sonnst wäre fail
                     self.errorMessages = data.errormessages
                 }
                 else {
                     //success
-                    self.saveError      = false
+                    self.config.saveError      = false
+                    self.config.saveOptionsError = false
                     self.servererrors   = []
                     self.$parent.closeTopicQuestionEdit()
                 }
             })
             .fail(function() {
                 self.config.saveError = true
+                self.config.saveOptionsError = false
             });
         },
         getVotingoptions(){
