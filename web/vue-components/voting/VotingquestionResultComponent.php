@@ -119,6 +119,10 @@ else $env_vuecomponent_dir = "vue-components/voting/";
             <div v-if="question.hasweighting=='1' && question.votingtype.name == 'radio'">Gesamtzahl anwesender Stimmen: {{activeStimmen}}</div>
 
         </div>
+            
+        <br/>
+        <a href="" v-on:click.prevent="$parent.closeTopicQuestionEdit()" class="btn btn-outline-primary" id="cancel-button">Zurück</a>
+            
         </div>
 
         <br/><br/>
