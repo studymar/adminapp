@@ -172,6 +172,7 @@ class Votinganswer extends \yii\db\ActiveRecord
     
     /**
      * Zählt die abgegebenen Personen
+     * @param Votingquestion $votingquestion
      * @return int
      */
     public static function countResultsByAnswerer($votingquestion)
@@ -185,6 +186,23 @@ class Votinganswer extends \yii\db\ActiveRecord
     }
 
     /**
+     * Zählt die abgegebenen Personen
+     * @param int $votingquestion_id
+     * @param boolean $hasweighting
+     * @return int
+     */
+    public static function countResultsByAnswererByVotingquestionId($votingquestion_id, $hasweighting)
+    {
+        //wenn mit gewichtung, die Anzahl unterschiedlicher votingweights-Antworter zählen
+        if($hasweighting)
+            return Votinganswer::find()->where('votingquestion_id = '.$votingquestion_id)->select('votingweights_id')->distinct()->count();
+        //sonst anzahl unterschiedlicher IPs zählen
+        else
+            return Votinganswer::find()->where('votingquestion_id = '.$votingquestion_id)->select('answerer')->distinct()->count();
+    }
+    
+    
+    /**
      * Zählt die abgegebenen Values
      * @return int
      */
@@ -195,6 +213,7 @@ class Votinganswer extends \yii\db\ActiveRecord
 
     /**
      * Zählt die abgegebenen Antworten
+     * @param Votingquestion $votingquestion
      * @return int
      */
     public static function countResultsByAnswers($votingquestion)
@@ -202,6 +221,15 @@ class Votinganswer extends \yii\db\ActiveRecord
         return Votinganswer::find()->where('votingquestion_id = '.$votingquestion->id)->select('id')->count();
     }
     
+    /**
+     * Zählt die abgegebenen Antworten
+     * @param int $votingquestion_id
+     * @return int
+     */
+    public static function countResultsByAnswersByVotingquestionId($votingquestion_id)
+    {
+        return Votinganswer::find()->where('votingquestion_id = '.$votingquestion->id)->select('id')->count();
+    }
     
     /**
      * Zählt die abgegebenen Stimmen

@@ -257,6 +257,14 @@ class VotingController extends Controller
 
         try {
             $items = $model->getVotingquestions()->asArray()->all();
+            foreach($items as &$item){
+                if(isset($item['id']) && $item['id'] != "0"){
+                    if(is_array($item) && isset($item['votingtype']['name']) && $item['votingtype']['name']=="text")
+                        $item["countresults"] = Votinganswer::countResultsByAnswersByVotingquestionId($item["id"]);
+                    else if(is_array($item))
+                        $item["countresults"] = Votinganswer::countResultsByAnswererByVotingquestionId($item["id"],$item["hasweighting"]);
+                }
+            }
             return $this->asJson(['items'=>$items]);
 
         } catch (\yii\db\Exception $e){
