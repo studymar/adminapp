@@ -59,7 +59,7 @@ else $env_vuecomponent_dir = "vue-components/voting/";
                                 </li>
                                 <li>
                                     <span class="material-icons" v-bind:class="[{'green':item.active == 1},{'red':item.active != 1}]">{{(item.active == 1)?'check':'close' }}</span>
-                                    {{(item.active == 1)?'Umfrage läuft...':'Umfrage nicht aktiv' }}
+                                    {{(item.active == 1)?'Umfrage läuft...'+ item.countresults + ' Antworten':'Umfrage nicht aktiv' }}
                                 </li>
                                 <li>
                                     <span class="material-icons" v-bind:class="[{'green':item.showresults == 1},{'red':item.showresults != 1}]">{{(item.showresults == 1)?'check':'close'}}</span>
