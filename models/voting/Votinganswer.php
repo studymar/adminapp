@@ -228,7 +228,7 @@ class Votinganswer extends \yii\db\ActiveRecord
      */
     public static function countResultsByAnswersByVotingquestionId($votingquestion_id)
     {
-        return Votinganswer::find()->where('votingquestion_id = '.$votingquestion->id)->select('id')->count();
+        return Votinganswer::find()->where('votingquestion_id = '.$votingquestion_id)->select('id')->count();
     }
     
     /**
